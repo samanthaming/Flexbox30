@@ -538,7 +538,7 @@ free space    |          |         |         | 400
 
 <p><img src="code-tidbits/23-flex-shrink.png" alt="flex-shrink" width="500"></p>
 
-So `flex-grow` will expand to fill the extra space if there are any. The opposite of that is `flex-shrink`. What happens when you run out of space. This is the property that controls how much your flex items will shrink to fit.
+So `flex-grow` will expand to fill the extra space if there are any. The opposite of that is `flex-shrink`. What happens when you run out of space. This is the property that controls how much your flex items will shrink to fit. So the higher the number, the more it will shrink.
 
 ```css
 .child {
