@@ -1,3 +1,4 @@
+<!-- In the description part of the files (and repo) you have "Crushing Flexbow..." change to "Crushing Flexbox..." -->
 # Flexbox30
 
 Learn Flexbox in 30 days with 30 code tidbits ✨
