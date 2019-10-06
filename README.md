@@ -1,6 +1,8 @@
 # Flexbox30
 
-Learn Flexbox in 30 days with 30 code tidbits ✨
+Learn Flexbox in 30 days with 30 code tidbits ✨ 
+
+Flexbox is a one-dimensional CSS layout method for laying out items in rows or columns.
 
 ## Table of Contents
 
