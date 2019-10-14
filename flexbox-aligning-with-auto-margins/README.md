@@ -12,6 +12,22 @@ And if you apply all the margins (left, right, top, bottom) with the shorthand `
 
 <p><img src="auto-margins-center.png" alt="Centering with Auto Margins" width="500"></p>
 
+## Understanding Margin
+
+You might be a bit confused at this point. Why does `margin-left:auto` push things to the right or why does `margin-right: auto` push things to the left. It seems counter-intuitive. Don't worry, I was too 😅
+
+Remember the basics of margin. It adds **space** to the element. So with `margin-left:50px`, it adds `50px` worth of space to the left of the element. Which pushes the element to the right. With `margin-left:auto`, the `auto` calculates the entire available space and makes that the amount of space to the left of the element. Which pushes the element all the way to the right.
+
+<p><img src="understanding-margin.png" alt="Understanding Margin" width="500"></p>
+
+| margin          | space                    | appearance                   |
+|-----------------|--------------------------|------------------------------|
+| `margin-left`   | adds space to the left   | pushes element to the right  |
+| `margin-right`  | adds space to the right  | pushes element to the left   |
+| `margin-top`    | adds space to the top    | pushes element to the bottom |
+| `margin-bottom` | adds space to the bottom | pushes element to the top    |
+| `margin`        | adds space all around    | pushes element to the center |
+
 ## Auto Margins Always Wins 🏆
 
 If you use **auto margins**, it will reign supreme and your Flexbox alignment properties will have no effect 💪
