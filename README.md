@@ -2,6 +2,8 @@
 
 Learn Flexbox in 30 days with 30 code tidbits ✨
 
+<img src="flexbox30-cover.png" alt="Flexbox Cover" width="350">
+
 ## Table of Contents
 
 1. [Introduction](#flexbox-intro)
