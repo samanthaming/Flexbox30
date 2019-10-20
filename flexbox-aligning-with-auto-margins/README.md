@@ -1,10 +1,10 @@
 # Flexbox: Aligning with Auto Margins
 
-You learned that `align-self` gives you control of the child item in the cross axis. Your next question might be "is there something similar for the main axis", say a "justify-self" 🤔 Great question! Unfortunately the answer is NO 😅. But we have an existing CSS property that we can use! And that's **auto margins**. We can use it to control horizontal alignment of specific element.
+You learned that `align-self` gives you control of the child item in the cross axis. Your next question might be "is there something similar for the main axis", say a "justify-self" 🤔 Great question! Unfortunately, the answer is NO 😅. But we have an existing CSS property that we can use! And that's **auto margins**. We can use it to control the horizontal alignment of a specific element.
 
 <p><img src="auto-margins-horizontal.png" alt="Horizontal Alignment with Auto Margins" width="500"></p>
 
-Actually, you can also use **auto margins** to control vertical alignment of a specific element.
+Actually, you can also use **auto margins** to control the vertical alignment of a specific element.
 
 <p><img src="auto-margins-vertical.png" alt="Vertical Alignment with Auto Margins" width="500"></p>
 
@@ -42,7 +42,7 @@ In non dev terms, **auto margins** is that clueless friend who you kindly invite
 
 ## Auto Margins Examples
 
-Here are some examples where **auto margins** really shines! It's great to layout your nav bar in whatever style you prefer 🤩
+Here are some examples where **auto margins** really shine! It's great to layout your navbar in whatever style you prefer 🤩
 
 <p><img src="auto-margins-examples.png" alt="Auto Margins Examples" width="500"></p>
 
@@ -53,7 +53,7 @@ I bet your head is spinning now as to use which and when to use what (the proble
 1. Always use **Flexbox** properties
 2. If not possible, use **auto margins**
 
-Reasoning? I think Flexbox properties are more intuitive and reads more explicit than "auto margins". Check it:
+Reasoning? I think Flexbox properties are more intuitive and read more explicit than "auto margins". Check it:
 
 ```css
 .child {
@@ -64,12 +64,12 @@ Reasoning? I think Flexbox properties are more intuitive and reads more explicit
 **vs**
 
 ```css
-child {
+.child {
   margin-top: auto;
 }
 ```
 
-Even if you don't have any Flexbox knowledge. Just be reading this code, you can conclude that the `child` is aligning to the _end_. However with the `margin-top: auto`, you're kinda spinning your head with what that exactly looks like. Of course, this is just my recommendation. You feel free to do what works for you and your team 😊
+Even if you don't have any Flexbox knowledge. Just be reading this code, you can conclude that the `child` is aligning to the _end_. However, with `margin-top: auto` option, you're kinda spinning your head with what that exactly looks like. Of course, this is just my recommendation. You feel free to do what works for you and your team 😊
 
 ## Resources
 
