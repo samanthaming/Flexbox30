@@ -5,7 +5,7 @@ draft/
 # > https://gist.github.com/octocat/9257657
 
 # Compiled source #
-###################
+######
 *.com
 *.class
 *.dll
@@ -27,7 +27,7 @@ draft/
 *.zip
 
 # Logs and databases #
-######################
+
 *.log
 *.sql
 *.sqlite
