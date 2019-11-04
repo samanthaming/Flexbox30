@@ -538,9 +538,9 @@ free space    |          |         |         | 400
 
 ### [Day 23: flex-shrink](#flex-shrink)
 
-<p><img src="code-tidbits/23-flex-shrink.png" alt="flex-shrink" width="500"></p>
-
 So `flex-grow` will expand to fill the extra space if there are any. The opposite of that is `flex-shrink`. What happens when you run out of space. This is the property that controls how much your flex items will shrink to fit. Note the larger the number, the more it will shrink 👍
+
+<p><img src="code-tidbits/23-flex-shrink.png" alt="flex-shrink" width="500"></p>
 
 ```css
 .child {
@@ -728,7 +728,7 @@ total shrink scaled width | -      | -      | **4800**
 
 **Step 4-2: Back to calculating "shrink ratio"**
 
-Fantasic, now that we know the "total shrink scaled width", we can return with calculating the "shrink ratio". Remember the formula:
+Fantastic, now that we know the "total shrink scaled width", we can return with calculating the "shrink ratio". Remember the formula:
 
 ```code
 shrink ratio = (width x flex shrink) / total shrink scaled width
