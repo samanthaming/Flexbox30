@@ -4,7 +4,7 @@ Aprenda Flexbox en 30 días con 30 tidbits de código ✨
 
 <img src="flexbox30-cover.png" alt="Flexbox Cover" width="350">
 
-## Table of Contents
+## Tabla de Contenidos
 
 1. [Introducción](#flexbox-intro)
 1. [Flex Container & Flex Items](#flex-container-and-flex-items)
@@ -49,49 +49,49 @@ Aprenda Flexbox en 30 días con 30 tidbits de código ✨
 
 ### [Día 1: Introducción](#flexbox-intro)
 
-Antes de Flexbox, usábamos principalmente floats para el diseño. Y para aquellos desarrolladores de CSS, todos conocemos las frustraciones y limitaciones de la antigua forma -- especialmente la capacidad de centrarse verticalmente dentro de un padre. Ugh, eso fue tan molesto! ¡Ya no! Flexbox para la victoria!
+Antes de Flexbox, usábamos principalmente floats para el diseño. Y para aquellos desarrolladores de CSS, todos conocemos las frustraciones y limitaciones de la antigua forma `--` especialmente la capacidad de centrarse verticalmente dentro de un padre. Ugh, eso fue tan molesto! ¡Ya no! Flexbox para la victoria!
 
-<p><img src="code-tidbits-es/1-flexbox-intro.png" alt="Flexbox Introduction" width="500"></p>
+<p><img src="../code-tidbits/1-flexbox-intro.png" alt="Flexbox Introduction" width="500"></p>
 
 <a id="flex-container-and-flex-items"></a>
 
-### [Day 2: Flex Container & Flex Items](#flex-container-and-flex-items)
+### [Día 2: Contenedor Flex & Elementos Flex](#flex-container-and-flex-items)
 
-In order to get Flexbox to work, you need to set up the Parent-Child relationship. The parent is the flex container, and everything within it is the children or flex items.
+Para que Flexbox funcione, debe configurar la relación padre-hijo. El padre es el contenedor flex, y todo lo que contiene son los hijos o elementos flex.
 
-<p><img src="code-tidbits/2-flex-container-and-flex-items.png" alt="Flex Container & Flex Items" width="500"></p>
+<p><img src="../code-tidbits/2-flex-container-and-flex-items.png" alt="Flex Container & Flex Items" width="500"></p>
 
 <a id="immediate-child-only"></a>
 
-### [Day 3: Immediate Child Only](#immediate-child-only)
+### [Día 3: Solo un niño inmediato](#immediate-child-only)
 
-One VERY important thing I want to point out is that the flex container only wraps around its immediate children. The flex container doesn't wrap beyond one layer deep. Only the immediate children. So there is NOT a grandchildren or grand-grandchildren relationship. Only Parent ↔️ Immediate Children!
+Una cosa MUY importante que quiero señalar es que el contenedor flex solo se envuelve alrededor de sus hijos inmediatos. El contenedor flex no se envuelve más allá de una capa de profundidad. Solo los niños inmediatos. Entonces NO hay una relación de nietos o bisnietos. ¡Solo padres ↔️ niños inmediatos!
 
-Of course, you can establish a Flexbox as long as there is a parent-child relationship. So a child can also be the flex container to its children. But it will be a separate flex container. And it doesn't carry over the grandparent flex properties.
+Por supuesto, puede establecer un Flexbox siempre que haya una relación padre-hijo. Por lo tanto, un niño también puede ser el contenedor flex para sus hijos. Pero será un contenedor flex separado. Y no transfiere las propiedades flexibles de los abuelos.
 
-This is probably one of the most important concepts that helped me understand how Flexbox works. And knowing this will help solve a lot of those "hey, why isn't this working" moments 😅
+Este es probablemente uno de los conceptos más importantes que me ayudó a comprender cómo funciona Flexbox. Y saber esto ayudará a resolver muchos de esos momentos "oye, ¿por qué no funciona?" 😅
 
-<p><img src="code-tidbits/3-immediate-child-only.png" alt="Immediate Child Only" width="500"></p>
+<p><img src="../code-tidbits/3-immediate-child-only.png" alt="Immediate Child Only" width="500"></p>
 
 <a id="flexbox-axes"></a>
 
-### [Day 4: Flexbox Axes](#flexbox-axes)
+### [Día 4: Ejes Flexbox](#flexbox-axes)
 
-Flexbox operates in a 2 axes system: a main and a cross axis. The main axis is your defining direction of how your flex items are placed in the flex container. Determining the cross axis is very simple, it's in the direction that's perpendicular to your main axis.
+Flexbox opera en un sistema de 2 ejes: uno principal y un eje transversal. El eje principal define la dirección de cómo se colocan sus elementos flex en el contenedor flex. Determinar el eje transversal es muy simple, está en la dirección que es perpendicular a su eje principal.
 
-Remember in math class, we were taught **x** and **y** axis. Well, throw that out. Because the main axis can be horizontal or vertical. The **x** axis is not always the main axis. This was a mistake I made, so hopefully you won’t make the same incorrect assumption as I did 😅
+Recuerdas que en la clase de matemáticas, nos enseñaron los ejes **x** y **y**. Bueno, tíralo. Porque el eje principal puede ser horizontal o vertical. El eje **x** no siempre es el eje principal. Cometí un error, así que espero que no hagas la misma suposición incorrecta que yo 😅
 
-<p><img src="code-tidbits/4-flexbox-axes.png" alt="Flexbox Axes" width="500"></p>
+<p><img src="../code-tidbits/4-flexbox-axes.png" alt="Flexbox Axes" width="500"></p>
 
 <a id="flexbox-module"></a>
 
-### [Day 5: Flexbox Module](#flexbox-module)
+### [Día 5: Módulo Flexbox](#flexbox-module)
 
-Let's zoom in on one of the layouts and check out the anatomy of our Flexbox. On each axis, there is a start and an end.  If it's on the main axis, the starting position is called **main start** and if the ending position is called **main end**. The same concept applies to the cross axis. Knowing your start and end is important because you can control where your flex items are placed.
+Acerquémonos a uno de los diseños y veamos la anatomía de Flexbox. En cada eje, hay un comienzo y un final. Si está en el eje principal, la posición inicial se llama **inicio principal** y si la posición final se llama **final principal**. El mismo concepto se aplica al eje transversal. Conocer su inicio y final es importante porque puede controlar dónde se colocan sus elementos flex.
 
-And this concludes our Flexbox Fundamentals.
+Y esto concluye nuestros Fundamentos de Flexbox.
 
-<p><img src="code-tidbits/5-flexbox-module.png" alt="Flexbox Module" width="500"></p>
+<p><img src="../code-tidbits/5-flexbox-module.png" alt="Flexbox Module" width="500"></p>
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -102,6 +102,7 @@ And this concludes our Flexbox Fundamentals.
 ### [Day 6: Parent Properties](#parent-properties)
 
 Now you know Flex operates in a Parent-Child relationship. So we have 2 entities involved to get this tango started. And each entity will have its own set of unique CSS properties that can be applied to them. That's why it's important that you know which element is the parent and which element(s) is the child. Let's get started with the parent properties 🤰
+
 
 <p><img src="code-tidbits/6-parent-properties.png" alt="Parent Properties" width="500"></p>
 
