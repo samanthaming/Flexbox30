@@ -95,74 +95,74 @@ Y esto concluye nuestros Fundamentos de Flexbox.
 
 **[⬆ back to top](#table-of-contents)**
 
-## Parent Properties
+## Propiedades del padre
 
 <a id="parent-properties"></a>
 
-### [Day 6: Parent Properties](#parent-properties)
+### [Día 6: Propiedades del padre](#parent-properties)
 
-Now you know Flex operates in a Parent-Child relationship. So we have 2 entities involved to get this tango started. And each entity will have its own set of unique CSS properties that can be applied to them. That's why it's important that you know which element is the parent and which element(s) is the child. Let's get started with the parent properties 🤰
+Ahora sabe que Flex opera en una relación padre-hijo. Entonces tenemos 2 entidades involucradas para comenzar este tango. Y cada entidad tendrá su propio conjunto de propiedades CSS únicas que se pueden aplicar a ellas. Por eso es importante que sepa qué elemento quiere decir que es el padre y qué elemento(s) es el hijo. Comencemos con las propiedades principales 🤰.
 
 
-<p><img src="code-tidbits/6-parent-properties.png" alt="Parent Properties" width="500"></p>
+<p><img src="../code-tidbits/6-parent-properties.png" alt="Parent Properties" width="500"></p>
 
 <a id="display"></a>
 
-### [Day 7: Display](#display)
+### [Día 7: Display](#display)
 
-To start this Flexbox party, we need to first create our flex container. This is done by applying `flex` to the `display` property on the parent element. Bam! Now all its immediate children will become flex items 🎊
+Para comenzar esta fiesta de Flexbox, primero debemos crear nuestro contenedor flex. Esto se realiza aplicando `flex` a la propiedad `display` en el elemento padre. Bam! Ahora todos sus hijos inmediatos se convertirán en elementos flex 🎊.
 
-There are 2 types of flex container: `flex` will create a *block* level flex container. And `inline-flex` will create an *inline* level flex container. More on *block* and *inline* tomorrow 😉
+Hay 2 tipos de contenedor flex: `flex` creará un contenedor flex de tipo *block*. E `inline-flex` creará un contenedor flex de tipo *inline*. Más de *block* e *inline* mañana 😉
 
-<p><img src="code-tidbits/7-display.png" alt="Display" width="500"></p>
+<p><img src="../code-tidbits/7-display.png" alt="Display" width="500"></p>
 
 ```css
-.parent {
+.padre {
   display: flex /* default */
-        or inline-flex
+        o inline-flex
 }
 ```
 
 <a id="block-vs-inline"></a>
 
-### [Day 8: block vs inline](#block-vs-inline)
+### [Día 8: block vs inline](#block-vs-inline)
 
-Very simply explained, `block` element takes up the entire width of the container. They look like building blocks where each block is stacked on each other. Whereas `inline` element only takes up the space it needs. So they appear to be in a line, or side by side of each other.
+Explicado de manera muy simple, el elemento `block` ocupa todo el ancho del contenedor. Parecen bloques de construcción donde cada bloque está apilado unos sobre otros. Mientras que el elemento `inline` solo ocupa el espacio que necesita. Entonces parecen estar en una línea, o uno al lado del otro.
 
-<p><img src="code-tidbits/8-block-vs-inline.png" alt="block vs inline" width="500"></p>
+<p><img src="../code-tidbits/8-block-vs-inline.png" alt="block vs inline" width="500"></p>
 
 <a id="flex-direction"></a>
 
-### [Day 9: flex-direction](#flex-direction)
+### [Día 9: flex-direction](#flex-direction)
 
-This is the property that allows us to define our main axis. Remember I mentioned that our main axis can be horizontal or vertical. So if we want the main axis to be horizontal, that's called **row**. And if we want it to be vertical, that's called **column**. Also, remember we had a **main start** and **main end**. We simply add a `reverse` suffix to set our "main start" in the reverse direction. Pretty cool eh 👍
+Esta es la propiedad que nos permite definir nuestro eje principal. Recuerde que mencioné que nuestro eje principal puede ser horizontal o vertical. Entonces, si queremos que el eje principal sea horizontal, usamos **row**. Y si queremos que sea vertical, usamos **column**. Además, recuerde que tuvimos un **inicio principal** y **final principal**. Simplemente agregamos un sufijo `reverse` para establecer nuestro "inicio principal" en la dirección inversa. Genial eh 👍
 
-<p><img src="code-tidbits/9-flex-direction.png" alt="flex-direction" width="500"></p>
+<p><img src="../code-tidbits/9-flex-direction.png" alt="flex-direction" width="500"></p>
 
 ```css
 .parent {
   flex-direction: row /* default */
-               or row-reverse
-               or column
-               or column-reverse
+               o row-reverse
+               o column
+               o column-reverse
 }
 ```
 
 <a id="flex-wrap"></a>
 
-### [Day 10: flex-wrap](#flex-wrap)
+### [Día 10: flex-wrap](#flex-wrap)
 
-By default, flex items will try to shrink itself to fit onto one line, in other words, `no wrap`. However if you want the flex items to maintain its size and have the overflow spread on multiple lines in the containers, then you can turn on `wrap`.
+Por defecto, los elementos flex tratarán de encogerse para que quepan en una línea, en otras palabras, `no wrap`. Sin embargo, si desea que los elementos flexibles mantengan su tamaño y que el desbordamiento se extienda en varias líneas en los contenedores, puede activar `wrap`.
 
-This property is what will allow flex items in your container to occupy more than one line.
+Esta propiedad es lo que permitirá que los artículos flexibles en su contenedor ocupen más de una línea.
 
-<p><img src="code-tidbits/10-flex-wrap.png" alt="flex-wrap" width="500"></p>
+<p><img src="../code-tidbits/10-flex-wrap.png" alt="flex-wrap" width="500"></p>
 
 ```css
 .parent {
   flex-wrap: nowrap /* default */
-          or wrap
-          or wrap-reverse
+          o wrap
+          o wrap-reverse
 }
 ```
 
