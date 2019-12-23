@@ -1,62 +1,60 @@
-# Flexbox: Aligning with Auto Margins
+# Flexbox: Alineación con márgenes automáticos
 
-You learned that `align-self` gives you control of the child item in the cross axis. Your next question might be "is there something similar for the main axis", say a "justify-self" 🤔 Great question! Unfortunately, the answer is NO 😅. But we have an existing CSS property that we can use! And that's **auto margins**. We can use it to control the horizontal alignment of a specific element.
+Aprendiste que `align-self` te da el control del elemento hijo en el eje transversal. Su próxima pregunta podría ser "¿hay algo similar para el eje principal" 🤔 ¡Gran pregunta! Lamentablemente, la respuesta es NO 😅. ¡Pero tenemos una propiedad CSS existente que podemos usar! Y eso es **márgenes automáticos**. Podemos usarlo para controlar la alineación horizontal de un elemento específico.
 
-<p><img src="auto-margins-horizontal.png" alt="Horizontal Alignment with Auto Margins" width="500"></p>
+<p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-horizontal.png" alt="Horizontal Alignment with Auto Margins" width="500"></p>
 
-Actually, you can also use **auto margins** to control the vertical alignment of a specific element.
+En realidad, también puede usar **márgenes automáticos** para controlar la alineación vertical de un elemento específico.
 
-<p><img src="auto-margins-vertical.png" alt="Vertical Alignment with Auto Margins" width="500"></p>
+<p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-vertical.png" alt="Vertical Alignment with Auto Margins" width="500"></p>
 
-And if you apply all the margins (left, right, top, bottom) with the shorthand `margins`. You actually center that particular child in the horizontal and vertical direction!
+Y si aplica todos los márgenes (left, right, top, bottom) con la abreviatura `margins`. ¡En realidad centras a ese hijo en particular en la dirección horizontal y vertical!
 
-<p><img src="auto-margins-center.png" alt="Centering with Auto Margins" width="500"></p>
+<p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-center.png" alt="Centering with Auto Margins" width="500"></p>
 
-## Understanding Margin
+## Entendiendo Margin
 
-You might be a bit confused at this point. Why does `margin-left:auto` push things to the right or why does `margin-right: auto` push things to the left. It seems counter-intuitive. Don't worry, I was too 😅
+Recuerda los conceptos básicos de margen. Agrega **espacio** al elemento. Entonces, con `margin-left: 50px`, agrega un valor de `50px` de espacio a la izquierda del elemento. Lo que empuja el elemento hacia la derecha. Con `margin-left: auto`, el `auto` calcula todo el espacio disponible y lo convierte en la cantidad de espacio a la izquierda del elemento. Lo que empuja el elemento completamente hacia la derecha.
 
-Remember the basics of margin. It adds **space** to the element. So with `margin-left:50px`, it adds `50px` worth of space to the left of the element. Which pushes the element to the right. With `margin-left:auto`, the `auto` calculates the entire available space and makes that the amount of space to the left of the element. Which pushes the element all the way to the right.
+<p><img src="../../flexbox-aligning-with-auto-margins/understanding-margin.png" alt="Understanding Margin" width="500"></p>
 
-<p><img src="understanding-margin.png" alt="Understanding Margin" width="500"></p>
+| margin          | espacio                            | apariencia                                 |
+|-----------------|------------------------------------|--------------------------------------------|
+| `margin-left`   | agrega espacio a la izquierda      | empuja el elemento hacia la derecha        |
+| `margin-right`  | agrega espacio a la derecha        | empuja el elemento hacia la izquierda      |
+| `margin-top`    | agrega espacio a la parte superior | empuja el elemento hacia la parte superior |
+| `margin-bottom` | agrega espacio a la parte inferior | empuja el elemento hacia la parte inferior |
+| `margin`        | agrega espacio alrededor           | empuja el elemento hacia el centro         |
 
-| margin          | space                    | appearance                   |
-|-----------------|--------------------------|------------------------------|
-| `margin-left`   | adds space to the left   | pushes element to the right  |
-| `margin-right`  | adds space to the right  | pushes element to the left   |
-| `margin-top`    | adds space to the top    | pushes element to the bottom |
-| `margin-bottom` | adds space to the bottom | pushes element to the top    |
-| `margin`        | adds space all around    | pushes element to the center |
+## Los márgenes automáticos siempre ganan 🏆
 
-## Auto Margins Always Wins 🏆
+Si usa **márgenes automáticos**, reinará supremamente y sus propiedades de alineación de Flexbox no tendrán efecto 💪
 
-If you use **auto margins**, it will reign supreme and your Flexbox alignment properties will have no effect 💪
+<p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-vs-flexbox.png" alt="Auto Margins vs Flexbox Properties" width="500"></p>
 
-<p><img src="auto-margins-vs-flexbox.png" alt="Auto Margins vs Flexbox Properties" width="500"></p>
+**¿Por qué?**
 
-**Why?**
+> Nota: Si el espacio libre se distribuye a los márgenes automáticos, las propiedades de alineación no tendrán efecto en esa dimensión porque los márgenes habrán robado todo el espacio libre restante después de flex
 
-> Note: If free space is distributed to auto margins, the alignment properties will have no effect in that dimension because the margins will have stolen all the free space left over after flexing.
+En términos no de desarrollo, los **márgenes automáticos** es ese amigo despistado al que invitó amablemente a quedarse en su casa y luego piensan que toda la casa es suya y se hace cargo de todo el espacio. ¿No? No tienes ese tipo de amigo. Yo tampoco 😳 Pero creo que entiendes el punto 😂
 
-In non dev terms, **auto margins** is that clueless friend who you kindly invited to stay at your house and then they think the entire house is theirs and takes over all the space. No? You don't have that type of friend. Neither do I 😳 But I think you get the point 😂
+## Ejemplos de márgenes automáticos
 
-## Auto Margins Examples
+¡Aquí hay algunos ejemplos donde los **márgenes automáticos** realmente brillan! Es genial diseñar su navbar en el estilo que prefiera 🤩
 
-Here are some examples where **auto margins** really shine! It's great to layout your navbar in whatever style you prefer 🤩
+<p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-examples.png" alt="Auto Margins Examples" width="500"></p>
 
-<p><img src="auto-margins-examples.png" alt="Auto Margins Examples" width="500"></p>
+## ¿Cuál debería usar 🤔
 
-## Which should I use 🤔
+Apuesto a que tu cabeza está girando ahora para usar qué y cuándo usar qué (el problema de tener varias opciones) 😅 . Así es como lo hago:
 
-I bet your head is spinning now as to use which and when to use what (the problem with choices am I right) 😅. Here's how I go about it:
+1. Utilice siempre las propiedades **Flexbox**
+2. Si no es posible, use **márgenes automáticos**
 
-1. Always use **Flexbox** properties
-2. If not possible, use **auto margins**
-
-Reasoning? I think Flexbox properties are more intuitive and read more explicit than "auto margins". Check it:
+¿Razonamiento? Creo que las propiedades de Flexbox son más intuitivas y se leen más explícitamente que los "márgenes automáticos". Revisalo:
 
 ```css
-.child {
+.hijo {
   align-self: flex-end;
 }
 ```
@@ -64,14 +62,14 @@ Reasoning? I think Flexbox properties are more intuitive and read more explicit 
 **vs**
 
 ```css
-.child {
+.hijo {
   margin-top: auto;
 }
 ```
 
-Even if you don't have any Flexbox knowledge. Just be reading this code, you can conclude that the `child` is aligning to the _end_. However, with `margin-top: auto` option, you're kinda spinning your head with what that exactly looks like. Of course, this is just my recommendation. You feel free to do what works for you and your team 😊
+Incluso si no tienes ningún conocimiento de Flexbox. Solo lea este código, puede concluir que el `hijo` se está alineando hasta el _final_. Sin embargo, con la opción `margin-top: auto`, estás girando un poco la cabeza con cómo se ve exactamente eso. Por supuesto, esta es solo mi recomendación. Siéntase libre de hacer lo que funcione para usted y su equipo 😊
 
-## Resources
+## Recursos
 
 - [W3C Flexbox Spec: Aligning with auto margins](https://www.w3.org/TR/css-flexbox-1/#auto-margins)
 - [Hackernoon: Flexbox's Best-Kept Secret](https://hackernoon.com/flexbox-s-best-kept-secret-bd3d892826b6)
