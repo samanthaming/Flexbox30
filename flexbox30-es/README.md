@@ -1,8 +1,8 @@
 # Flexbox30
 
-Aprenda Flexbox en 30 días con 30 tidbits de código ✨
+Aprenda Flexbox en 30 días con 30 tidbits (cositas) de código ✨
 
-<img src="flexbox30-cover.png" alt="Flexbox Cover" width="350">
+<img src="../flexbox30-cover.png" alt="Flexbox Cover" width="350">
 
 ## Tabla de Contenidos
 
@@ -168,368 +168,370 @@ Esta propiedad es lo que permitirá que los artículos flexibles en su contenedo
 
 <a id="flex-flow"></a>
 
-### [Day 11: flex-flow](#flex-flow)
+### [Día 11: flex-flow](#flex-flow)
 
-So we've learned `flex-direction` and `flex-wrap`. If you understand those 2, you'll get `flex-flow`! Because it's just a shorthand for these two properties 👏
+Así que hemos aprendido `flex-direction` y` flex-wrap`. ¡Si entiendes esos 2, obtendrás `flex-flow`! Porque es solo una abreviatura de estas dos propiedades 👏
 
-You can set both properties at the same time. Or you can just pass one of them. The default value is `row nowrap`. So if you just set one value, the property that you didn't set will just take on the default value.
+Puede establecer ambas propiedades al mismo tiempo. O simplemente puedes pasar uno de ellos. El valor predeterminado es `row nowrap`. Entonces, si solo establece un valor, la propiedad que no se estableció solo tomará el valor predeterminado.
 
-<p><img src="code-tidbits/11-flex-flow.png" alt="flex-flow" width="500"></p>
+<p><img src="../code-tidbits/11-flex-flow.png" alt="flex-flow" width="500"></p>
 
 ```css
 .parent {
   flex-flow: row nowrap /* default */
-          or <flex-direction> <flex-wrap>
-          or <flex-direction>
-          or <flex-wrap>
+          o <flex-direction> <flex-wrap>
+          o <flex-direction>
+          o <flex-wrap>
 }
 ```
 
 <a id="justify-content-row"></a>
 
-### [Day 12: justify-content [row]](#justify-content-row)
+### [Día 12: justify-content [row]](#justify-content-row)
 
-Here comes the fun part. This is the property that sets alignment along the main axis. In this example, the main axis lies horizontally. In other words, the flex-direction is set to `row`.
+Aquí viene la parte divertida. Esta es la propiedad que establece la alineación a lo largo del eje principal. En este ejemplo, el eje principal se encuentra horizontalmente. En otras palabras, flex-direction se establece en `row`.
 
-This is probably my most used parent property. You just choose the layout you like and BAM Flexbox automatically does it for you. And it's absolutely responsive. As your grow or shrink the window width, Flexbox will do the behind-the-scene calculation and ensure that your chosen layout is maintained. It's like one of those kitchen appliances where "you set it and forget it" 🍗
+Esta es probablemente mi propiedad principal más utilizada. Simplemente elija el diseño que desee y BAM Flexbox lo hace automáticamente por usted. Y es absolutamente responsivo. A medida que aumenta o reduce el ancho de la ventana, Flexbox hará el cálculo detrás de escena y se asegurará de que se mantenga el diseño elegido. Es como uno de esos electrodomésticos de cocina donde "lo configuras y lo olvidas" 🍗
 
-<p><img src="code-tidbits/12-justify-content-row.png" alt="justify-content row" width="500"></p>
+<p><img src="../code-tidbits/12-justify-content-row.png" alt="justify-content row" width="500"></p>
 
 ```css
 .parent {
   justify-content: flex-start /* default */
-                or flex-end
-                or center
-                or space-around
-                or space-between
-                or space-evenly
+                o flex-end
+                o center
+                o space-around
+                o space-between
+                o space-evenly
 }
 ```
 
 <a id="justify-content-column"></a>
 
-### [Day 13: justify-content [column]](#justify-content-column)
+### [Día 13: justify-content [column]](#justify-content-column)
 
-The main axis can also lie vertically. In that case, flex-direction is set to `column`. Here's how the flex items will be aligned in that instance.
+El eje principal también puede estar en posición vertical. En ese caso, flex-direction se establece en `column`. Así es como se alinearán los elementos flexibles en esa instancia.
 
-<p><img src="code-tidbits/14-justify-content-column.png" alt="justify-content column" width="500"></p>
+<p><img src="../code-tidbits/14-justify-content-column.png" alt="justify-content column" width="500"></p>
 
 ```css
 .parent {
   flex-direction: column;
   
   justify-content: flex-start /* default */
-                or flex-end
-                or center
-                or space-around
-                or space-between
-                or space-evenly
+                o flex-end
+                o center
+                o space-around
+                o space-between
+                o space-evenly
 }
 ```
 
 <a id="space-around-vs-space-evenly"></a>
 
-### [Day 14: space-around vs space-evenly](#space-around-vs-space-evenly)
+### [Día 14: space-around vs space-evenly](#space-around-vs-space-evenly)
 
-You might not notice the subtle difference between space-around and space-evenly. So let's talk about it. In `space-evenly`, the empty space in between the flex items is always equal. However, in `space-around`, only the inner items will have equal spacing in between each other. The first and last item will only be allocated half the spacing. Giving the visual appearance of it being more spread out. One may say these folks like to live life on the edge 😂
+Es posible que no note la sutil diferencia entre space-around y space-evenly. Entonces hablemos de eso. En `space-evenly`, el espacio vacío entre los elementos flex siempre es igual. Sin embargo, en `space-around`, solo los elementos internos tendrán el mismo espacio entre ellos. Al primer y último elemento solo se le asignará la mitad del espacio. Dando la apariencia visual de que está más extendido. Se puede decir que a estas personas les gusta vivir la vida al límite 😂
 
-<p><img src="code-tidbits/13-space-around-vs-space-evenly.png" alt="space-around vs space-evenly" width="500"></p>
+<p><img src="../code-tidbits/13-space-around-vs-space-evenly.png" alt="space-around vs space-evenly" width="500"></p>
 
 <a id="align-items-row"></a>
 
-### [Day 15: align-items [row]](#align-items-row)
+### [Día 15: align-items [row]](#align-items-row)
 
-So justify-content controls how items are laid out on the main axis. What about their layout in the cross axis? Don't worry, that's where `align-items` come into play. Remember the cross axis is always perpendicular to the main axis. So if the main axis is sitting horizontally, where flex-direction is `row`. Then , the cross axis is sitting vertically. Aren't you glad we spend almost a week on the fundamentals, that knowledge is all being applied now 🤓
+Entonces justify-content controla cómo se distribuyen los elementos en el eje principal. ¿Qué pasa con su diseño en el eje transversal? No se preocupe, ahí es donde entran en juego los `align-items`. Recuerde que el eje transversal siempre es perpendicular al eje principal. Entonces, si el eje principal está sentado horizontalmente, donde la dirección de flexión es `row`. Entonces, el eje transversal está sentado verticalmente. ¿No te alegra que pasemos casi una semana en los fundamentos, ese conocimiento se está aplicando ahora? 🤓
 
-<p><img src="code-tidbits/15-align-items-row.png" alt="align-items row" width="500"></p>
+<p><img src="../code-tidbits/15-align-items-row.png" alt="align-items row" width="500"></p>
 
 ```css
 .parent {
   align-items: stretch /* default */
-            or flex-start
-            or flex-end
-            or center
-            or baseline
+            o flex-start
+            o flex-end
+            o center
+            o baseline
 }
 ```
 
 <a id="baseline"></a>
 
-### [Day 16: baseline](#baseline)
+### [Día 16: baseline](#baseline)
 
 The baseline value is a bit tricky. So let's make sure we understand what that is. Baseline has to do with typography or text. It is the imaginary line where the text sits. If you have the same font size, you really don't visually see a difference. However when you have different font sizes, then the text seems all over the place because the baseline is off. The way to ensure a uniform baseline where all the different sizes of text can rest on is to use the `baseline` value 👍
 
-<p><img src="code-tidbits/16-baseline.png" alt="baseline" width="500"></p>
+El valor baseline (línea base) es un poco complicado. Así que asegurémonos de entender qué es eso. Baseline tiene que ver con la tipografía o el texto. Es la línea imaginaria donde se encuentra el texto. Si tiene el mismo tamaño de fuente, realmente no ve una diferencia visual. Sin embargo, cuando tiene diferentes tamaños de fuente, el texto aparece por todas partes porque baseline está desactivada. La forma de garantizar una línea base uniforme donde todos los diferentes tamaños de texto puedan descansar es usar el valor de `baseline` 👍
+
+<p><img src="../code-tidbits/16-baseline.png" alt="baseline" width="500"></p>
 
 <a id="align-items-column"></a>
 
-### [Day 17: align-items [column]](#align-items-column)
+### [Día 17: align-items [column]](#align-items-column)
 
-Now let's take a look at how our flex items are aligned if the cross axis is sitting horizontally. In other words, flex-direction is `column`.
+Ahora echemos un vistazo a cómo se alinean nuestros elementos flex si el eje transversal se asienta horizontalmente. En otras palabras, flex-direction es `column`.
 
-<p><img src="code-tidbits/17-align-items-column.png" alt="align-items column" width="500"></p>
+<p><img src="../code-tidbits/17-align-items-column.png" alt="align-items column" width="500"></p>
 
 ```css
 .parent {
   flex-direction: column;
   
   align-items: stretch /* default */
-            or flex-start
-            or flex-end
-            or center
-            or baseline
+            o flex-start
+            o flex-end
+            o center
+            o baseline
 }
 ```
 
 <a id="align-content"></a>
 
-### [Day 18: align-content](#align-content)
+### [Día 18: align-content](#align-content)
 
-Remember we had `flex-wrap` where we allow flex items to wrap on separate lines. Well, with `align-content` we can control how those row of items are aligned on the cross axis. Since this is only for wrapped items, this property won't have any effect if you only have a singular line of flex items.
+Recuerde que teníamos `flex-wrap` donde permitimos que los elementos flex se envuelvan en líneas separadas. Bueno, con `align-content` podemos controlar cómo se alinean esas filas de elementos en el eje transversal. Como esto es solo para elementos envueltos, esta propiedad no tendrá ningún efecto si solo tiene una línea única de elementos flex.
 
-<p><img src="code-tidbits/18-align-content.png" alt="align-content" width="500"></p>
+<p><img src="../code-tidbits/18-align-content.png" alt="align-content" width="500"></p>
 
 ```css
 .parent {
   align-content: stretch /* default */
-              or flex-start
-              or flex-end
-              or center
-              or space-between
-              or space-around
+              o flex-start
+              o flex-end
+              o center
+              o space-between
+              o space-around
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#tabla-de-contenidos)**
 
-## Child Properties
+## Propiedades del hijo
 
 <a id="child-properties"></a>
 
-### [Day 19: Child Properties](#child-properties)
+### [Día 19: Propiedades del hijo](#child-properties)
 
-Yay, you did it! We made it through the parent properties. Up next, let dig into the child properties. Take a breather today, tomorrow we go full speed again 🏎
+Yay, lo hiciste! Lo hicimos usando las propiedades del padre. A continuación, profundisaremos en las propiedades del hijo. Toma un respiro hoy, mañana volveremos a toda velocidad 🏎
 
-<p><img src="code-tidbits/19-child-properties.png" alt="Child Properties" width="500"></p>
+<p><img src="../code-tidbits/19-child-properties.png" alt="Child Properties" width="500"></p>
 
 <a id="order"></a>
 
-### [Day 20: order](#order)
+### [Día 20: order](#order)
 
-By default, flex items are displayed in the same order they appear in your code. But what if you want to change that? No problem! Use the `order` property to change the ordering of your items 🔢
+De forma predeterminada, los elementos flex se muestran en el mismo orden en que aparecen en su código. Pero, ¿y si quieres cambiar eso? ¡No hay problema! Use la propiedad `order` para cambiar el orden de sus elementos 🔢
 
-<p><img src="code-tidbits/20-order.png" alt="order" width="500"></p>
+<p><img src="../code-tidbits/20-order.png" alt="order" width="500"></p>
 
 ```css
 .child {
   order: 0 /* default */
-      or <number>
+      o <número>
 }
 ```
 
 <a id="flex-grow"></a>
 
-### [Day 21: flex-grow](#flex-grow)
+### [Día 21: flex-grow](#flex-grow)
 
-I mentioned in the beginning that Flexbox is great for responsive design. This is where it shines. The `flex-grow` property allows our flex item to grow if necessary. So if there is extra free space in my container, I can tell a particular item to fill it up based on some proportion. That's pretty nuts! When I was learning CSS, I remember everything is pretty static. Now with this property, it's like it has its own brain and it will adjust its size depending on the container. That's so great. I don't have to monitor the size. It will adjust accordingly. This was a quite the mind blow for me 🤯
+Mencioné al principio que Flexbox es ideal para un diseño receptivo. Aquí es donde brilla. La propiedad `flex-grow` que permite que nuestro elemento flex crezca si es necesario. Entonces, si hay espacio libre adicional en mi contenedor, puedo decirle a un elemento en particular que lo llene en función de alguna proporción. Eso es bastante loco! Cuando estaba aprendiendo CSS, recuerdo que todo es bastante estático. Ahora con esta propiedad, es como si tuviera su propio cerebro y ajustará su tamaño según el contenedor. Eso es muy genial. No tengo que controlar el tamaño. Se ajustará en consecuencia. Este fue un gran golpe mental para mí 🤯
 
-<p><img src="code-tidbits/21-flex-grow.png" alt="flex-grow" width="500"></p>
+<p><img src="../code-tidbits/21-flex-grow.png" alt="flex-grow" width="500"></p>
 
 ```css
 .child {
   flex-grow: 0 /* default */
-          or <number>
+          o <número>
 }
 ```
 
 <a id="flex-grow-calculation"></a>
 
-### [Day 22: flex-grow calculation](#flex-grow-calculation)
+### [Día 23: flex-grow (cálculo)](#flex-grow-calculation)
 
-Being able to grow and fill the free space is pretty cool. Because we don't set the final width of our flex item, the size it grows to always seem so random to me. So let's look at the math. Honestly you don't need to know this to understand Flexbox. The browser takes care of this automatically for you. But knowing what's behind this sorcery might demystify this process and help you understand it better. It's like once you know the trick to the magic, you're no longer tricked by the magic 😉
+Poder crecer y llenar el espacio libre es bastante genial. Debido a que no establecemos el ancho final de nuestro elemento flexible, el tamaño en el que crece siempre me parece tan aleatorio. Así que echemos un vistazo a las matemáticas. Honestamente, no necesita saber esto para comprender Flexbox. El navegador se encarga de esto automáticamente por usted. Pero saber qué hay detrás de esta brujería podría desmitificar este proceso y ayudarlo a comprenderlo mejor. Es como una vez que conoces el truco de la magia, ya no te engaña la magia 😉
 
-<p><img src="code-tidbits/22-flex-grow-calculation.png" alt="flex-grow calculation" width="500"></p>
+<p><img src="../code-tidbits/22-flex-grow-calculation.png" alt="flex-grow calculation" width="500"></p>
 
 <details>
-  <summary><b>Expand to see the calculation</b></summary><br>
+  <summary><b>Click para expandir y ver el cálculo</b></summary><br>
 
-I know it can be quite overwhelming to see all numbers crammed into a tidbit. So let's walk through the calculation 👍
+Sé que puede ser bastante abrumador ver todos los números metidos en un tidbit. Así que veamos el cálculo 👍
 
-Here's the `HTML` and `CSS` we're working with:
+Aquí están los `HTML` y` CSS` con los que estamos trabajando:
 
 _HTML_
 
 ```html
-<div class="parent">
-  <div class="child green"></div>
-  <div class="child yellow"></div>
-  <div class="child blue"></div>
+<div class="padre">
+  <div class="hijo verde"></div>
+  <div class="hijo amarillo"></div>
+  <div class="hijo azul"></div>
 </div>
 ```
 
 _CSS_
 
 ```css
-.parent {
+.padre {
   width: 700px;
 }
-.child {
+.hijo {
   width: 100px;
 }
-.green {
+.verde {
   flex-grow: 1;
 }
-.yellow {
+.amarillo {
   flex-grow: 0;
 }
-.blue {
+.azul {
   flex-grow: 3;
 }
 ```
 
 <br>
 
-**Step 1: Breaking down the variables**
+**Paso 1: Desglose de las variables**
 
-Here's the formula:
+Aquí está la fórmula:
 
 ```code
-new width = ( (flex grow / total flex grow) x free space) + width
+nuevo ancho = ( (flex grow / flex grow total ) x espacio libre) + ancho
 ```
 
-Let's extract the variables required in the formula to this handy table we can fill in as we go:
+Vamos a extraer las variables requeridas en la fórmula en esta práctica tabla que podemos completar a medida que avanzamos:
 
-Variables  |     |
----        | --- |
-flex grow  | *provided from css*
-total flex | *need to calculate*
-free space | *need to calculate*
-width      | *provided from css*
+Variables       |     |
+---             | --- |
+flex grow       | *proporcionado por css*
+flex grow total | *se necesita calcular*
+espacio libre   | *se necesita calcular*
+total           | *proporcionado por css*
 
 <br>
 
-**Step 2: Fill in what we know**
+**Paso 2: Completa lo que sabemos**
 
-From the `CSS` value, we can conclude the following:
+Del valor `CSS`, podemos concluir lo siguiente:
 
-- Each child element has a width `100`
-- The parent element (container) has a width of `700`
-- The child has a `flex-grow` of `1`, `0`, `3`
+- Cada elemento hijo tiene un ancho `100`
+- El elemento padre (contenedor) tiene un ancho de `700`
+- El hijo tiene un `flex-grow` de` 1`, `0`,` 3`
 
-Let's update our chart with this information:
+Actualicemos nuestra tabla con esta información:
 
-<i></i>    |  Green | Yellow | Blue
----        | ---    | ---    | --- |
-flex grow  | 1      | 0      | 3
-total flex |
-free space |
-width      | 100    | 100    | 100
+<i> </i>        | Verde | Amarillo | Azul
+---             | --- | --- | ---  |
+flex grow       | 1   | 0   | 3
+flex grow total |
+espacio libre   |
+ancho           | 100 | 100 | 100
 
 <br>
 
-**Step 3: Calculate "free space"**
+**Paso 3: Calcular "espacio libre"**
 
-This is the formula:
+Esta es la fórmula:
 
 ```code
-free space = parent width - total children widths
+espacio libre = ancho del padre - anchos total de los hijos
 ```
 
-Remember what we know:
+Recuerda lo que sabemos:
 
-- Each child element has a width `100`
-- The parent element (container) has a width of `700`
+- Cada elemento hijo tiene un ancho `100`
+- El elemento padre (contenedor) tiene un ancho de `700`
 
-Great, we can use that information to calculate "total children widths":
+Genial, podemos usar esa información para calcular el "ancho total de hijos":
 
 ```code
-total children widths = green + yellow + blue
-                      = 100   + 100    + 100
+ancho total de los hijos = verde + amarillo + azul
+                         = 100   + 100      + 100
 
 => 300
 ```
 
-Now we can calculate our "free space":
+Ahora podemos calcular nuestro "espacio libre":
 
 ```code
-free space = parent width - total children widths
-           = 700          -  300
+espacio libre = ancho del padre - anchos total de los hijos
+              = 700             -  300
 
 => 400
 ```
 
-Let's update our chart and add these additional information:
+Actualicemos nuestra tabla y agreguemos esta información adicional:
 
-<i></i>    |  Green | Yellow | Blue | Total
----        | ---    | ---    | ---  | --- |
-flex grow  | 1      | 0      | 3
-total flex |
-free space | -      | -      | -    | **400**
-width      | 100    | 100    | 100
+<i> </i>        | Verde | Amarillo | Azul | Total
+---             | --- | --- | ---  | ---  |
+flex grow       | 1   | 0   | 3
+flex grow total |
+espacio libre   | -   | -   | -   | **400**
+ancho           | 100 | 100 | 100
 
 <br>
 
-**Step 4: Calculate "total flex grow"**
+**Paso 4: Calcular el "flex grow total"**
 
-This is an easy one, we simply add up our total `flex-grow`:
+Este es fácil, simplemente sumamos nuestro total `flex-grow`:
 
 ```code
-total flex grow = green + yellow + blue
-                = 1     + 0      + 3
+flex grow total = verde + amarillo + azul
+                = 1     + 0        + 3
 
 => 4
 ```
 
-Fill in our chart and Voilà! We have all the information we need for the final calculation 👍
+Rellene nuestro tabla y ¡Voilà! Tenemos toda la información que necesitamos para el cálculo final 👍
 
-<i></i>     |  Green | Yellow | Blue | Total
----         | ---    | ---    | ---  | --- |
-flex grow   | 1      | 0      | 3    | **4**
-free space  | -      | -      | -    | 400
-width       | 100    | 100    | 100  |
+<i> </i>      | Verde | Amarillo | Azul | Total
+---           | ---   | ---      | ---  | --- |
+flex grow     | 1     | 0        | 3    | **4**
+espacio libre | -     | -        | -    | 400
+ancho         | 100   | 100      | 100  |
 
 <br>
 
-**Final step: Calculate "new width"**
+**Paso final: Calcular "nuevo ancho"**
 
-Remember the formula:
+Recuerda la fórmula:
 
 ```code
-new width = ( (flex grow / total flex grow) x free space) + width
+nuevo ancho = ( (flex grow / flex grow total) x espacio libre) + ancho
 ```
 
-_a. Green_
+_a. Verde_
 
 ```code
-new width = ( (1/4 * 400) ) + 100
+nuevo ancho = ( (1/4 * 400) ) + 100
 
 => 200
 ```
 
-_b. Yellow_
+_b. Amarillo_
 
 ```code
-new width = ( (0/4 * 400) ) + 100
+nuevo ancho = ( (0/4 * 400) ) + 100
 
 => 100
 ```
 
-_c. Blue_
+_c. Azul_
 
 ```code
-new width = ( (3/4 * 400) ) + 100
+nuevo ancho = ( (3/4 * 400) ) + 100
 
 => 400
 ```
 
-Done! We have successfully calculated the new width 🥳
+¡Hecho! Hemos calculado con éxito el nuevo ancho 🥳
 
-<i></i>       |  Green   | Yellow  | Blue    | Total
----           | ---      | ---     | ---     | --- |
-width         | 200      | 100     | 400  
-flex grow     | 1        | 0       | 3       | 4
-free space    |          |         |         | 400
-**new width** | **200**  | **100** | **400**  
+<i> </i>        | Verde   | Amarillo | Azul | Total
+---             | ---     | ---      | ---  | --- |
+ancho           | 200     | 100      | 400
+flex grow       | 1       | 0        | 3    | 4
+espacio libre   |         |          |      | 400
+**nuevo ancho** | **200** | **100**  | ** 400 **
 
 <hr>
 
@@ -537,56 +539,56 @@ free space    |          |         |         | 400
 
 <a id="flex-shrink"></a>
 
-### [Day 23: flex-shrink](#flex-shrink)
+### [Día 23: flex-shrink](#flex-shrink)
 
-So `flex-grow` will expand to fill the extra space if there are any. The opposite of that is `flex-shrink`. What happens when you run out of space. This is the property that controls how much your flex items will shrink to fit. Note the larger the number, the more it will shrink 👍
+Entonces, `flex-grow` se expandirá para llenar el espacio extra si hay alguno. Lo contrario de eso es `flex-shrink`. Lo que sucede cuando te quedas sin espacio. Esta es la propiedad que controla cuánto se encogerán los elementos flex para ajustarse. Tenga en cuenta que cuanto mayor sea el número, más se reducirá 👍
 
-<p><img src="code-tidbits/23-flex-shrink.png" alt="flex-shrink" width="500"></p>
+<p><img src="../code-tidbits/23-flex-shrink.png" alt="flex-shrink" width="500"></p>
 
 ```css
 .child {
   flex-shrink: 1 /* default */
-            or <number>
+            o <número>
 }
 ```
 
 <a id="flex-shrink-calculation"></a>
 
-### [Day 24: flex-shrink calculation](#flex-shrink-calculation)
+### [Day 24: flex-shrink (cálculo)](#flex-shrink-calculation)
 
-This is another optional knowledge. But if you're like me and is curious how the browser calculates flex-shrink. Join me in this rabbit hole 🐰
+Este es otro conocimiento opcional. Pero si eres como yo y tienes curiosidad por saber cómo calcula el navegador flex-shrink. Únete a mí en esta madriguera de conejo 🐰
 
-The math behind `flex-shrink` is a bit more complicated then `flex-grow`. You need to take into account of it's existing proportion and shrink it accordingly to the flex shrink amount. Hence, a few more calculation involved. Again, if this is throwing you off. Skip it. You don't need to know this to understand Flexbox. Luckily the browser takes care of it for you, how wonderful 😌
+La matemática detrás de `flex-shrink` es un poco más complicada que `flex-grow`. Debe tener en cuenta su proporción existente y reducirla de acuerdo con la cantidad de flex shrink. Por lo tanto, hay algunos cálculos más involucrados. De nuevo, si esto te está desanimando. Saltarlo. No necesita saber esto para comprender Flexbox. Afortunadamente, el navegador lo cuida por ti, qué maravilloso 😌
 
-<p><img src="code-tidbits/24-flex-shrink-calculation.png" alt="flex-shrink calculation" width="500"></p>
+<p><img src="../code-tidbits/24-flex-shrink-calculation.png" alt="flex-shrink calculation" width="500"></p>
 
 <details>
-  <summary><b>Expand to see the calculation</b></summary><br>
+  <summary><b>Click para expandir y ver el cálculo</b></summary><br>
 
-Indeed the calculation is a bit more complicated. But no worries, let's break it down we go through it step by step, you got this 💪
+De hecho, el cálculo es un poco más complicado. Pero no te preocupes, vamos a analizarlo, lo revisamos paso a paso, tú lo tienes 💪
 
-Here's the `HTML` and `CSS` we're working with:
+Aquí están los `HTML` y` CSS` con los que estamos trabajando:
 
 _HTML_
 
 ```html
-<div class="parent">
-  <div class="green"></div>
-  <div class="yellow"></div>
+<div class="padre">
+  <div class="verde"></div>
+  <div class="amarillo"></div>
 </div>
 ```
 
 _CSS_
 
 ```css
-.parent {
+.padre {
   width: 800px;
 }
-.green {
+.verde {
   width: 300px;
   flex-shrink: 4;
 }
-.yellow {
+.amarillo {
   width: 600px;
   flex-shrink: 6;
 }
@@ -594,148 +596,153 @@ _CSS_
 
 <br>
 
-**Step 1: Breaking down the variables**
+**Paso 1: Desglose de las variables**
 
-This is the formula:
+Esta es la fórmula:
 
 ```code
-new width = width - (shrink space x shrink ratio)
+shrink space = espacio de contracción
+shrink ratio = relación de contracción
 ```
 
-Let's extract the variables required in the formula to this handy table we can fill in as we go:
+```code
+nuevo ancho = ancho - (shrink space x shrink ratio)
+```
+
+Vamos a extraer las variables requeridas en la fórmula a esta práctica tabla que podemos completar a medida que avanzamos:
 
 Variables    |     |
 ---          | --- |
-width        | *need to calculate*
-shrink space | *need to calculate*
-shrink ratio | *need to calculate*
+ancho        | *se necesita calcular*
+shrink space | *se necesita calcular*
+shrink ratio | *se necesita calcular*
 
 <br>
 
-**Step 2: Fill in what we know**
+**Paso 2: Completa lo que sabemos**
 
-From the `CSS` value, we can conclude the following:
+Del valor `CSS`, podemos concluir lo siguiente:
 
-- The parent element (container) has a width of `800`
-- Green child element has a width `300` and `flex-shrink` of `4`
-- Yellow child element has a width `600` and `flex-shrink` of `6`
+- El elemento padre (contenedor) tiene un ancho de `800`
+- El elemento hijo verde tiene un ancho `300` y `flex-shrink` de `4`
+- El elemento hijo amarillo tiene un ancho `600` y `flex-shrink` de `6`
 
-Let's update our chart with this information:
+Actualicemos nuestra tabla con esta información:
 
-<i></i>     |  Green | Yellow |
----         | ---    | ---    |
+<i></i>     |  Verde | Anarillo |
+---         | ---    | ---      |
 flex shrink | 4      | 6
-width       | 300    | 600
+ancho       | 300    | 600
 
 <br>
 
-**Step 3: Calculate "shrunk space"**
+**Paso 3: Calcular "espacio reducido"**
 
-This is the formula:
+Esta es la formula:
 
 ```code
-shrunk space = total children widths - parent width
+espacio reducido = ancho total de los hijos - ancho del padre
 ```
 
-Remember what we know:
+Recuerda lo que sabemos:
 
-- The parent element (container) has a width of `800`
-- The child elements has a width of `300`, `600`
+- El elemento padre (contenedor) tiene un ancho de `800`
+- Los elementos hijos tienen un ancho de `300`,` 600`
 
-Great, we can use that information to calculate "total children widths":
+Genial, podemos usar esa información para calcular el "ancho total de hijos":
 
 ```code
-total children widths = green + yellow
-                      = 300   + 600
+ancho total de los hijos = verde + amarillo
+                         = 300   + 600
 
 => 900
 ```
 
-Now we can calculate our "shrunk space":
+Ahora podemos calcular nuestro "espacio reducido":
 
 ```code
-shrunk space = total children widths - parent width
-             = 900                   -  800
+espacio reducido = ancho total de los hijos - ancho del padre
+                 = 900                   -  800
 
 => 100
 ```
 
-Let's update our chart and add the additional information:
+Actualicemos nuestra tabla y agreguemos la información adicional:
 
-<i></i>      |  Green | Yellow | Total
----          | ---    | ---    | --- |
-flex shrink  | 4      | 6
-width        | 300    | 600
-shrunk space | -      | -      | **100**
-
-<br>
-
-**Step 4: Calculate "shrink ratio"**
-
-This is the formula:
-
-```code
-shrink ratio = (width x flex shrink) / total shrink scaled width
-```
-
-Notice this new variable, `total shrink scaled width`. So we need to calculate that first to get our shrink ratio.
+<i></i>          |  Verde | Amarillo | Total
+---              | ---    | ---      | --- |
+flex shrink      | 4      | 6
+ancho            | 300    | 600
+espacio reducido | -      | -        | **100**
 
 <br>
 
-**Step 4-1: Calculate "total shrink scaled width"**
+**Paso 4: Calcular "shrink ratio" (relación de contracción)**
 
-This is the formula:
+Esta es la formula:
 
 ```code
-total shrink scaled width = Σ(width x flex shrink)
+shrink ratio = (ancho x flex shrink) / ancho total de contracción
 ```
 
-"Σ" Sigma is a math symbol that means the summation of something. So we need to apply `width x flex shrink` for all the child elements.
+Noticia esta es una nueva variable, `ancho total encogido`. Por lo tanto, primero debemos calcular eso para obtener nuestra relación de contracción.
 
-_Green_
+<br>
+
+**Paso 4-1: Calcule el  "ancho total escalado de contracción"**
+
+Esta es la formula
 
 ```code
-width x flex shrink = 300 x 4
+ancho total escalado de contracción = Σ(ancho x flex shrink)
+```
+
+"Σ" Sigma es un símbolo matemático que significa la suma de algo. Por lo tanto, debemos aplicar `ancho x flex shrink` para todos los elementos hijos.
+
+_Verde_
+
+```code
+ancho x flex shrink = 300 x 4
 
 => 1200
 ```
 
-_Yellow_
+_Amarillo_
 
 ```code
-width x flex shrink = 600 x 6
+ancho x flex shrink = 600 x 6
 
 => 3600
 ```
 
-_Finally_
+_Finalmente_
 
 ```code
-total shrink scaled width = 1200 + 3600
+ancho total escalado de contracción = 1200 + 3600
 
 => 4800
 ```
 
-Let's add this information to our chart:
+Agreguemos esta información a nuestra tabla:
 
-<i></i>                   |  Green | Yellow | Total
----                       | ---    | ---    | --- |
-flex shrink               | 4      | 6
-width                     | 300    | 600
-shrunk space              | -      | -      | 100
-total shrink scaled width | -      | -      | **4800**
+<i></i>                            |  Verde | Amarillo | Total
+---                                | ---    | ---      | --- |
+flex shrink                        | 4      | 6
+width                              | 300    | 600
+shrunk space                       | -      | -        | 100
+ancho total escalado de contracción | -      | -        | **4800**
 
 <br>
 
-**Step 4-2: Back to calculating "shrink ratio"**
+**Paso 4-2: Volver a calcular "shrink ratio"**
 
-Fantastic, now that we know the "total shrink scaled width", we can return with calculating the "shrink ratio". Remember the formula:
+Fantástico, ahora que conocemos el "ancho total escalado de contracción", podemos regresar calculando el "shrink ratio". Recuerda la fórmula:
 
 ```code
-shrink ratio = (width x flex shrink) / total shrink scaled width
+shrink ratio = (width x flex shrink) / ancho total escalado de contracción
 ```
 
-_Green_
+_Verde_
 
 ```code
 shrink ratio = (300 x 4) / 4800
@@ -743,7 +750,7 @@ shrink ratio = (300 x 4) / 4800
 => 0.25
 ```
 
-_Yellow_
+_Amarillo_
 
 ```code
 shrink ratio = (600 x 6) / 4800
@@ -751,143 +758,143 @@ shrink ratio = (600 x 6) / 4800
 => 0.75
 ```
 
-Let's add this information to our chart:
+Agreguemos esta información a nuestra tabla:
 
-<i></i>      |  Green   | Yellow   | Total
----          | ---      | ---      | --- |
+<i></i>      |  Verde   | Amarillo   | Total
+---          | ---      | ---        | --- |
 flex shrink  | 4        | 6
 width        | 300      | 600
-shrunk space | -        | -        | 100
+shrunk space | -        | -          | 100
 shrink ratio | **0.25** | **0.75**
 
 <br>
 
-**Final step: Calculate "new width"**
+**Paso final: Calcular "nuevo ancho"**
 
-Remember the formula:
+Recuerda la formula:
 
 ```code
-new width = width - (shrink space x shrink ratio)
+nuevo ancho = ancho - (shrink space x shrink ratio)
 ```
 
-_Green_
+_Verde_
 
 ```code
-new width = 300 - (100 x 0.25)
+nuevo ancho = 300 - (100 x 0.25)
 
 => 275
 ```
 
-_Yellow_
+_Amarillo_
 
 ```code
-new width = 600 - (100 x 0.75)
+nuevo ancho = 600 - (100 x 0.75)
 
 => 525
 ```
 
-Done! We have successfully calculated the new width 🥳
+¡Hecho! Hemos calculado con éxito el nuevo ancho 🥳
 
-<i></i>       |  Green   | Yellow
----           | ---      | ---     |
-width         | 300      | 600
-shrunk space  | 4        | 6
-shrink ratio  | 0.25     | 0.75
-**new width** | **275**  | **525**
+<i></i>         |  Verde   | Amarillo
+---             | ---      | ---      |
+ancho           | 300      | 600
+shrunk space    | 4        | 6
+shrink ratio    | 0.25     | 0.75
+**nuevo ancho** | **275**  | **525**
 
 <hr>
 </details>
 
 <a id="flex-basis"></a>
 
-### [Day 25: flex-basis](#flex-basis)
+### [Día 26: flex-basis](#flex-basis)
 
-With the flex-grow and flex-shrink property, we know the flex size changes. With the `flex-basis` property, this is where we set its initial size. You can think of this property as the width of our flex items. So your next question might be what's the difference between width and flex-basis. Of course, you can still use width and it will still work. The reason it works is because if you didn't set the flex-basis, it will default to the width. So your browser will always try to find the `flex-basis` value as the size indicator. And if it can't find it, then it has no choice but to go with your width property.  Don't make the browser do extra work. Do it the proper flex way and use `flex-basis`.
+Con la propiedad flex-grow y flex-shrink, sabemos que el tamaño de flex cambia. Con la propiedad `flex-basis`, aquí es donde establecemos su tamaño inicial. Puede considerar esta propiedad como el ancho de nuestros elementos flex. Entonces, su próxima pregunta podría ser cuál es la diferencia entre ancho y flex-basis. Por supuesto, aún puede usar el ancho y seguirá funcionando. La razón por la que funciona es porque si no configuró flex-basis, el ancho será predeterminado. Por lo tanto, su navegador siempre intentará encontrar el valor de `base flexible` como indicador de tamaño. Y si no puede encontrarlo, entonces no tiene más remedio que ir con su propiedad de ancho. No hagas que el navegador haga un trabajo extra. Hágalo de la manera adecuada y use `flex-basis`.
 
-You may notice I referenced width in my previous formulas. That's because I had not cover flex-basis at that point. So if we want to be **flex** correct, please replace where I mentioned width with flex-basis 😝
+Puede notar que hice referencia al ancho en mis fórmulas anteriores. Eso es porque no había cubierto flex-basis en ese punto. Entonces, si queremos ser **flex** correctos, reemplace donde mencioné el ancho con flex-basis 😝
 
-<p><img src="code-tidbits/25-flex-basis.png" alt="flex-basis" width="500"></p>
+<p><img src="../code-tidbits/25-flex-basis.png" alt="flex-basis" width="500"></p>
 
 ```css
 .child {
   flex-basis: auto /* default */
-           or <width>
+           o <ancho>
 }
 ```
 
-Valid width values are absolute [`<length>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length) and [`<percentage>`](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage). You can see some examples and read more on MDN web docs:
+Los valores de ancho válidos son absolutos [`<longitud>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length) y [`<porcentaje>`](https://desarrollador.mozilla.org/en-US/docs/Web/CSS/percentage) . Puede ver algunos ejemplos y leer más en los documentos web de MDN:
 
-- [`MDN: <length>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
-- [`MDN: <percentage>`](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage)
+- [`MDN: <longitud>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
+- [`MDN: <porcentaje>`](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage)
 
 <a id="flex-basis-vs-widths"></a>
 
-### [Day 26: flex-basis vs widths](#flex-basis-vs-widths)
+### [Día 26: flex-basis vs widths](#flex-basis-vs-widths)
 
-Here you can see very clearly that when an item has a flex-basis and a width. The browser will always use the value set with `flex-basis` . Again, another reason to use the proper flex way 😉
+Aquí puede ver muy claramente que cuando un elemento tiene flex-basis y un width. El navegador siempre usará el valor establecido con `flex-basis`. Nuevamente, otra razón para usar la forma adecuada 😉
 
-But watch out, if you also set a `min-width` and `max-width`. In those cases, `flex-basis` will lose and will not be used as the width.
+Pero cuidado, si también configuras un `min-width` y un `max-width`. En esos casos, `flex-basis` perderá y no se utilizará como ancho.
 
-<p><img src="code-tidbits/26-flex-basis-vs-widths.png" alt="flex-basis vs widths" width="500"></p>
+<p><img src="../code-tidbits/26-flex-basis-vs-widths.png" alt="flex-basis vs widths" width="500"></p>
 
 <a id="flex"></a>
 
-### [Day 27: flex](#flex)
+### [Día 27: flex](#flex)
 
-Sometimes, setting `flex-grow`, `flex-shrink` and `flex-basis` separately are tiring. Well, don't you worry. For the lazy programmers, I mean the efficient programmers 😜  You can set all 3 with the `flex` shorthand. The added bonus of this way is you don't have to set all 3 value, you can skip the properties you're not interested in and just set the one you are. And for the ones you skipped, it will just take on the default value. Awesome 👍
+A veces, configurar `flex-grow`,` flex-shrink` y `flex-base` por separado es agotador. Bueno, no te preocupes. Para los programadores perezosos, me refiero a los programadores eficientes 😜 Puede configurar los 3 con la abreviatura `flex`. La ventaja adicional de esta manera es que no tiene que establecer los 3 valores, puede omitir las propiedades que no le interesan y simplemente establecer la que es. Y para los que omitió, solo tomará el valor predeterminado. Impresionante 👍
 
-<p><img src="code-tidbits/27-flex.png" alt="flex" width="500"></p>
+<p><img src="../code-tidbits/27-flex.png" alt="flex" width="500"></p>
 
 ```css
 .child {
   flex: 0 1 auto /* default */
-     or <flex-grow> <flex-shrink> <flex-basis>
-     or <flex-grow>
-     or <flex-basis>
-     or <flex-grow> <flex-basis>
-     or <flex-grow> <flex-shrink>
+     o <flex-grow> <flex-shrink> <flex-basis>
+     o <flex-grow>
+     o <flex-basis>
+     o <flex-grow> <flex-basis>
+     o <flex-grow> <flex-shrink>
 }
 ```
 
 <a id="align-self"></a>
 
-### [Day 28: align-self](#align-self)
+### [Día 28: align-self](#align-self)
 
-Remember our `align-items` property where we can set the flex item along the cross axis. The thing with `align-items` is that it forces ALL of the flex items to play with the rules. But what if you want one of them to break the rule. No worries, for  you independent thinkers, you can use `align-self`. This property accepts all of the same values given to `align-items`, so you can easily break from the pack 😎
+Recuerde nuestra propiedad `align-items` donde podemos establecer el elemento flex a lo largo del eje transversal. Lo que ocurre con align-items es que obliga a TODOS los elementos flex a jugar con las reglas. Pero qué pasa si quieres que uno de ellos rompa la regla. No se preocupe, para los pensadores independientes, puede usar `align-self`. Esta propiedad acepta los mismos valores dados a `align-items`, por lo que puede separarse fácilmente del paquete 😎
 
-<p><img src="code-tidbits/28-align-self.png" alt="align-self" width="500"></p>
+<p><img src="../code-tidbits/28-align-self.png" alt="align-self" width="500"></p>
 
 ```css
 .child-1 {
   align-self: stretch /* default */
-           or flex-start
-           or flex-end
-           or center
-           or baseline
+           o flex-start
+           o flex-end
+           o center
+           o baseline
 }
 ```
 
-## Summary
+## Resumen
 
 <a id="flexbox-properties"></a>
 
-### [Day 29: Flexbox Properties](#flexbox-properties)
+### [Día 29: Propiedades de flexbox](#flexbox-properties)
 
-YAY!!! You did it! You learned all the properties of Flexbox! You're a Flexbox ninja now! We covered a lot in this short amount of time. Go back and re-visit the ones you still don't understand. Don't just read my Flexbox lessons. Check out other Flexbox tutorials. Sometimes reading a different perspective will help solidify your knowledge and fill in any gaps. Remember the best way to get better is to apply. I gave you the knowledge, now it's on YOU to apply and build something with it 💪
+¡¡¡HURRA!!! ¡Lo hiciste! ¡Aprendiste todas las propiedades de Flexbox! Eres un ninja de Flexbox ahora! Cubrimos mucho en este corto período de tiempo. Regrese y vuelva a visitar los que aún no comprende. No solo lea mis lecciones de Flexbox. Consulte otros tutoriales de Flexbox. A veces, leer una perspectiva diferente ayudará a solidificar su conocimiento y llenar cualquier vacío. Recuerde que la mejor manera de mejorar es aplicarlo. Te di el conocimiento, ahora depende de TI aplicar y construir algo con él 💪
 
-<p><img src="code-tidbits/29-flexbox-properties.png" alt="Flexbox Properties" width="500"></p>
+<p><img src="../code-tidbits/29-flexbox-properties.png" alt="Flexbox Properties" width="500"></p>
 
 <a id="flexbox-cheatsheet"></a>
 
-### [Day 30: Flexbox Cheatsheet](#flexbox-cheatsheet)
+### [Día 30: Hoja de trucos para Flexbox](#flexbox-cheatsheet)
 
-Final tidbit! Let me give you one more tidbit for the road. Memorizing all the available properties is not easy. Even after doing creating this entire tutorial, I still don't have all these properties memorized. Being a good programmer is not about how much you memorize, it's about problem solving. And that's why it's important for a programmer to continue to stay humble and learn. It's all about expanding our toolkit so when we do face a problem, we have a variety of tools that we can select from to fix it 🧰
+Tidbit (cosita) final! Déjame darte un dato más para el camino. Memorizar todas las propiedades disponibles no es fácil. Incluso después de crear todo este tutorial, todavía no tengo todas estas propiedades memorizadas. Ser un buen programador no se trata de cuánto memorizas, sino de resolver problemas. Y es por eso que es importante para un programador continuar siendo humilde y aprender. Se trata de expandir nuestro kit de herramientas para que cuando enfrentemos un problema, tengamos una variedad de herramientas que podemos seleccionar para solucionarlo 🧰
 
-Congratulation for completing Flexbox30! I hope you learned a lot and thank you for letting my tidbits be part of your programming journey 💛
+¡Felicitaciones por completar Flexbox30! Espero que hayas aprendido mucho y gracias por dejar que mis tidbits sean parte de tu viaje de programación 💛
 
-<p><img src="code-tidbits/30-flexbox-cheatsheet.png" alt="Flexbox Cheatsheet" width="500"></p>
+<p><img src="../code-tidbits/30-flexbox-cheatsheet.png" alt="Flexbox Cheatsheet" width="500"></p>
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#tabla-de-contenidos)**
 
 <a id="auto-margins"></a>
 
@@ -895,13 +902,15 @@ Congratulation for completing Flexbox30! I hope you learned a lot and thank you 
 
 Bonus content! Another way to align Flexbox child elements is to use auto margins. Although this isn't a Flexbox property, it's still important to be aware of it because it has a very interesting relationship with Flexbox. Check out my code notes on it if you're interested  👉 [Flexbox: Aligning with Auto Margins](/flexbox-aligning-with-auto-margins/README.md)
 
-<p><img src="code-tidbits/bonus-auto-margins.png" alt="Flexbox Cheatsheet" width="500"></p>
+¡Contenido extra! Otra forma de alinear elementos hijos en Flexbox es usar márgenes automáticos. Aunque esta no es una propiedad de Flexbox, es importante tenerla en cuenta porque tiene una relación muy interesante con Flexbox. Consulte las notas de mi código si está interesado 👉 [Flexbox: Alineando con márgenes automáticos](/flexbox-aligning-with-auto-margins-es/README.md)
+
+<p><img src="../code-tidbits/bonus-auto-margins.png" alt="Flexbox Cheatsheet" width="500"></p>
 
 <a id="resources"></a>
 
-## 📚 Resources
+## 📚 Recursos
 
-**Learning Flexbox**
+**Aprendiendo Flexbox**
 
 - [MDN web docs: Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [MDN web docs: Basic Concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
@@ -910,21 +919,22 @@ Bonus content! Another way to align Flexbox child elements is to use auto margin
 - [JoniBologna.com: Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)
 - [Interneting is hard: Flexbox](https://internetingishard.com/html-and-css/flexbox/)
 
-**Official Spec**
+**Especificaciones oficiales**
 
 - [W3C: Flexbox](https://www.w3.org/TR/css-flexbox-1/)
 
-**Community Suggestion**
+**Comunidades sugeridas**
 
-- [Flexbox Zombies](https://flexboxzombies.com) $
+- [Flexbox Zombies](https://flexboxzombies.com)
 - [Flexbox Froggy](https://flexboxfroggy.com/)
 - [Wes Bos: What the Flexbox?!](https://flexbox.io/)
 
 <a id="say-hello"></a>
 
-## 👋 Say Hello
+## 👋 Di hola
 
-> I share JS, HTML, CSS tidbits every week!
+> ¡Comparto tidbits de JS, HTML, CSS cada semana!
+
 
 Twitter: [@samantha_ming](https://twitter.com/samantha_ming)  
 Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/)  
@@ -935,26 +945,26 @@ Official: [samanthaming.com](https://www.samanthaming.com/)
 
 <a id="download-and-share"></a>
 
-## 💖 Download & Share
+## 💖 Descarga y comparte
 
-Absolutely! You are more than welcome to download and share my code tidbits. If you've gotten any value from my content and would like to help me reach more people, please do share!
+¡Absolutamente! Eres más que bienvenido a descargar y compartir mis tidbits de código. Si ha obtenido algún valor de mi contenido y desea ayudarme a llegar a más personas, ¡comparta!
 
-One thing that I kindly ask is that you don't edit the images or crop my name out. Please leave the images intact. Thank you for choosing to do the right thing 😇
+Una cosa que le pido amablemente es que no edite las imágenes ni recorte mi nombre. Por favor, deje las imágenes intactas. Gracias por elegir hacer lo correcto 😇
 
 <a id="contribution"></a>
 
-## 🌟 Contribution
+## 🌟 Contribución
 
-Yes! Anyone is welcome to contribute to the quality of this content. Please feel free to submit a PR request for typo fixes, spelling corrections, explanation improvements, etc. If you want to help translate the tutorial, that's even cooler! I'm hoping to at least create a Chinese version soon 👩🏻‍🏫
+¡Si! Cualquiera puede contribuir a la calidad de este contenido. No dude en enviar una solicitud de PR request para corregir errores tipográficos, correcciones ortográficas, mejoras de explicaciones, etc. Si desea ayudar a traducir el tutorial, ¡eso es aún mejor! Espero al menos crear una versión china pronto 👩🏻‍🏫
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#tabla-de-contenidos)**
 
 <a id="license"></a>
 
-## 👩🏻‍⚖️ License
+## 👩🏻‍⚖️ Licencia
 
-Thank you for wanting to share and include my work in your project 😊 If you're wondering how to provide attributions. It simply means don't edit the images. There is attribution automatically built into them. Easy peasy right! So you don't have to provide additional attribution when you share the images ⭐️
+Gracias por querer compartir e incluir mi trabajo en su proyecto 😊 Si se pregunta cómo proporcionar las atribuciones. Simplemente significa que no edite las imágenes. Hay atribución incorporada automáticamente en ellos. ¡Fácil, fácil! Por lo tanto, no tiene que proporcionar una atribución adicional cuando comparte las imágenes ⭐️
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />Este trabajo tiene licencia bajo un <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#tabla-de-contenidos)**
