@@ -1,17 +1,17 @@
 # Flexbox30
 
-Aprenda Flexbox en 30 días con 30 tidbits (cositas) de código ✨
+Aprenda Flexbox en 30 días con 30 tidbits (golosinas) de código ✨
 
 <img src="../flexbox30-cover.png" alt="Flexbox Cover" width="350">
 
 ## Tabla de Contenidos
 
 1. [Introducción](#flexbox-intro)
-1. [Flex Container & Flex Items](#flex-container-and-flex-items)
-1. [Immediate Child Only](#immediate-child-only)
-1. [Flexbox Axes](#flexbox-axes)
-1. [Flexbox Module](#flexbox-module)
-1. [Parent Properties](#parent-properties)
+1. [Contenedor Flex & Elementos Flex](#flex-container-and-flex-items)
+1. [Solo un hijo inmediato](#immediate-child-only)
+1. [Ejes de Flexbox](#flexbox-axes)
+1. [Módulo Flexbox](#flexbox-module)
+1. [Propiedades del padre](#parent-properties)
 1. [Display](#display)
 1. [block vs inline](#block-vs-inline)
 1. [flex-direction](#flex-direction)
@@ -24,22 +24,22 @@ Aprenda Flexbox en 30 días con 30 tidbits (cositas) de código ✨
 1. [baseline](#baseline)
 1. [align-items [column]](#align-items-column)
 1. [align-content](#align-content)
-1. [Child Properties](#child-properties)
+1. [Propiedades del hijo](#child-properties)
 1. [order](#order)
 1. [flex-grow](#flex-grow)
-1. [flex-grow calculation](#flex-grow-calculation)
+1. [flex-grow (cálculo)](#flex-grow-calculation)
 1. [flex-shrink](#flex-shrink)
-1. [flex-shrink calculation](#flex-shrink-calculation)
+1. [flex-shrink (cálculo)](#flex-shrink-calculation)
 1. [flex-basis](#flex-basis)
-1. [flex-basis vs widths](#flex-basis-vs-widths)
+1. [flex-basis vs width](#flex-basis-vs-widths)
 1. [flex](#flex)
 1. [align-self](#align-self)
-1. [Flexbox Properties](#flexbox-properties)
-1. [Flexbox Cheatsheet](#flexbox-cheatsheet)
-1. [Aligning with Auto Margins](#bonus-aligning-with-auto-margins)
+1. [Propiedades de Flexbox](#flexbox-properties)
+1. [Hoja de trucos para Flexbox](#flexbox-cheatsheet)
+1. [Alineación con márgenes automáticos](#auto-margins)
 1. [Recursos](#resources)
 1. [Di Hola](#say-hello)
-1. [Descarga & Comparte](#download-and-share)
+1. [Descarga y Comparte](#download-and-share)
 1. [Contribución](#contribution)
 1. [Licencia](#license)
 
@@ -49,7 +49,7 @@ Aprenda Flexbox en 30 días con 30 tidbits (cositas) de código ✨
 
 ### [Día 1: Introducción](#flexbox-intro)
 
-Antes de Flexbox, usábamos principalmente floats para el diseño. Y para aquellos desarrolladores de CSS, todos conocemos las frustraciones y limitaciones de la antigua forma `--` especialmente la capacidad de centrarse verticalmente dentro de un padre. Ugh, eso fue tan molesto! ¡Ya no! Flexbox para la victoria!
+Antes de Flexbox, usábamos principalmente floats para el diseño. Y para aquellos desarrolladores de CSS, todos conocemos las frustraciones y limitaciones de la antigua forma -- especialmente la capacidad de centrarse verticalmente dentro de un padre. ¡Ugh, eso fue tan molesto! ¡Ya no! ¡Flexbox para la victoria!
 
 <p><img src="../code-tidbits/1-flexbox-intro.png" alt="Flexbox Introduction" width="500"></p>
 
@@ -63,11 +63,11 @@ Para que Flexbox funcione, debe configurar la relación padre-hijo. El padre es 
 
 <a id="immediate-child-only"></a>
 
-### [Día 3: Solo un niño inmediato](#immediate-child-only)
+### [Día 3: Solo un hijo inmediato](#immediate-child-only)
 
-Una cosa MUY importante que quiero señalar es que el contenedor flex solo se envuelve alrededor de sus hijos inmediatos. El contenedor flex no se envuelve más allá de una capa de profundidad. Solo los niños inmediatos. Entonces NO hay una relación de nietos o bisnietos. ¡Solo padres ↔️ niños inmediatos!
+Una cosa MUY importante que quiero señalar es que el contenedor flex solo se envuelve alrededor de sus hijos inmediatos. El contenedor flex no se envuelve más allá de una capa de profundidad. Solo los hijos inmediatos. Entonces NO hay una relación de nietos o bisnietos. ¡Solo padres ↔️ hijos inmediatos!
 
-Por supuesto, puede establecer un Flexbox siempre que haya una relación padre-hijo. Por lo tanto, un niño también puede ser el contenedor flex para sus hijos. Pero será un contenedor flex separado. Y no transfiere las propiedades flexibles de los abuelos.
+Por supuesto, puede establecer un Flexbox siempre que haya una relación padre-hijo. Por lo tanto, un hijo también puede ser el contenedor flex para sus hijos. Pero será un contenedor flex separado. Y no transfiere las propiedades de Flexbox a los abuelos.
 
 Este es probablemente uno de los conceptos más importantes que me ayudó a comprender cómo funciona Flexbox. Y saber esto ayudará a resolver muchos de esos momentos "oye, ¿por qué no funciona?" 😅
 
@@ -75,11 +75,11 @@ Este es probablemente uno de los conceptos más importantes que me ayudó a comp
 
 <a id="flexbox-axes"></a>
 
-### [Día 4: Ejes Flexbox](#flexbox-axes)
+### [Día 4: Ejes de Flexbox](#flexbox-axes)
 
 Flexbox opera en un sistema de 2 ejes: uno principal y un eje transversal. El eje principal define la dirección de cómo se colocan sus elementos flex en el contenedor flex. Determinar el eje transversal es muy simple, está en la dirección que es perpendicular a su eje principal.
 
-Recuerdas que en la clase de matemáticas, nos enseñaron los ejes **x** y **y**. Bueno, tíralo. Porque el eje principal puede ser horizontal o vertical. El eje **x** no siempre es el eje principal. Cometí un error, así que espero que no hagas la misma suposición incorrecta que yo 😅
+Recuerdas que en la clase de matemáticas, nos enseñaron con los ejes **x** y **y**. Bueno, tíralo. Porque el eje principal puede ser horizontal o vertical. El eje **x** no siempre es el eje principal. Cometí un error, así que espero que no hagas la misma suposición incorrecta que yo 😅
 
 <p><img src="../code-tidbits/4-flexbox-axes.png" alt="Flexbox Axes" width="500"></p>
 
@@ -87,13 +87,13 @@ Recuerdas que en la clase de matemáticas, nos enseñaron los ejes **x** y **y**
 
 ### [Día 5: Módulo Flexbox](#flexbox-module)
 
-Acerquémonos a uno de los diseños y veamos la anatomía de Flexbox. En cada eje, hay un comienzo y un final. Si está en el eje principal, la posición inicial se llama **inicio principal** y si la posición final se llama **final principal**. El mismo concepto se aplica al eje transversal. Conocer su inicio y final es importante porque puede controlar dónde se colocan sus elementos flex.
+Acerquémonos a uno de los diseños y veamos la anatomía de Flexbox. En cada eje, hay un comienzo y un final. Si está en el eje principal, la posición inicial se llama **main start** (inicio principal) y si la posición final se llama **main end** (final principal). El mismo concepto se aplica al eje transversal. Conocer su inicio y final es importante porque puede controlar dónde se colocan sus elementos flex.
 
 Y esto concluye nuestros Fundamentos de Flexbox.
 
 <p><img src="../code-tidbits/5-flexbox-module.png" alt="Flexbox Module" width="500"></p>
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ volver arriba](#tabla-de-contenidos)**
 
 ## Propiedades del padre
 
@@ -101,7 +101,7 @@ Y esto concluye nuestros Fundamentos de Flexbox.
 
 ### [Día 6: Propiedades del padre](#parent-properties)
 
-Ahora sabe que Flex opera en una relación padre-hijo. Entonces tenemos 2 entidades involucradas para comenzar este tango. Y cada entidad tendrá su propio conjunto de propiedades CSS únicas que se pueden aplicar a ellas. Por eso es importante que sepa qué elemento quiere decir que es el padre y qué elemento(s) es el hijo. Comencemos con las propiedades principales 🤰.
+Ahora sabe que flex opera en una relación padre-hijo. Entonces tenemos 2 entidades involucradas para comenzar este tango. Y cada entidad tendrá su propio conjunto de propiedades CSS únicas que se pueden aplicar a ellas. Por eso es importante que sepa qué elemento es el padre y qué elemento(s) es el hijo. Comencemos con las propiedades principales 🤰
 
 
 <p><img src="../code-tidbits/6-parent-properties.png" alt="Parent Properties" width="500"></p>
@@ -110,16 +110,16 @@ Ahora sabe que Flex opera en una relación padre-hijo. Entonces tenemos 2 entida
 
 ### [Día 7: Display](#display)
 
-Para comenzar esta fiesta de Flexbox, primero debemos crear nuestro contenedor flex. Esto se realiza aplicando `flex` a la propiedad `display` en el elemento padre. Bam! Ahora todos sus hijos inmediatos se convertirán en elementos flex 🎊.
+Para comenzar esta fiesta de Flexbox, primero debemos crear nuestro contenedor flex. Esto se realiza aplicando `flex` a la propiedad `display` en el elemento padre. ¡Bam! Ahora todos sus hijos inmediatos se convertirán en elementos flex 🎊.
 
-Hay 2 tipos de contenedor flex: `flex` creará un contenedor flex de tipo *block*. E `inline-flex` creará un contenedor flex de tipo *inline*. Más de *block* e *inline* mañana 😉
+Hay 2 tipos de contenedor en Flexbox: `flex` creará un contenedor flex de tipo *block*. E `inline-flex` creará un contenedor flex de tipo *inline*. Más de *block* e *inline* mañana 😉
 
 <p><img src="../code-tidbits/7-display.png" alt="Display" width="500"></p>
 
 ```css
 .padre {
-  display: flex /* default */
-        o inline-flex
+  display: flex /* por defecto */
+         o inline-flex
 }
 ```
 
@@ -135,16 +135,16 @@ Explicado de manera muy simple, el elemento `block` ocupa todo el ancho del cont
 
 ### [Día 9: flex-direction](#flex-direction)
 
-Esta es la propiedad que nos permite definir nuestro eje principal. Recuerde que mencioné que nuestro eje principal puede ser horizontal o vertical. Entonces, si queremos que el eje principal sea horizontal, usamos **row**. Y si queremos que sea vertical, usamos **column**. Además, recuerde que tuvimos un **inicio principal** y **final principal**. Simplemente agregamos un sufijo `reverse` para establecer nuestro "inicio principal" en la dirección inversa. Genial eh 👍
+Esta es la propiedad que nos permite definir nuestro eje principal. Recuerde que mencioné que nuestro eje principal puede ser horizontal o vertical. Entonces, si queremos que el eje principal sea horizontal, usamos **row**. Y si queremos que sea vertical, usamos **column**. Además, recuerde que tuvimos un **main start** (inicio principal) y **main end** (final principal). Simplemente agregamos el sufijo `reverse` para establecer nuestro "main start" en la dirección inversa. Genial eh 👍
 
 <p><img src="../code-tidbits/9-flex-direction.png" alt="flex-direction" width="500"></p>
 
 ```css
-.parent {
-  flex-direction: row /* default */
-               o row-reverse
-               o column
-               o column-reverse
+.padre {
+  flex-direction: row /* por defecto */
+                o row-reverse
+                o column
+                o column-reverse
 }
 ```
 
@@ -152,17 +152,17 @@ Esta es la propiedad que nos permite definir nuestro eje principal. Recuerde que
 
 ### [Día 10: flex-wrap](#flex-wrap)
 
-Por defecto, los elementos flex tratarán de encogerse para que quepan en una línea, en otras palabras, `no wrap`. Sin embargo, si desea que los elementos flexibles mantengan su tamaño y que el desbordamiento se extienda en varias líneas en los contenedores, puede activar `wrap`.
+Por defecto, los elementos flex tratarán de encogerse para que quepan en una línea, en otras palabras, `no wrap`. Sin embargo, si desea que los elementos flex mantengan su tamaño y que el desbordamiento se extienda en varias líneas en los contenedores, puede activar `wrap`.
 
-Esta propiedad es lo que permitirá que los artículos flexibles en su contenedor ocupen más de una línea.
+Esta propiedad es lo que permitirá que los artículos flex ocupen más de una línea en su contenedor.
 
 <p><img src="../code-tidbits/10-flex-wrap.png" alt="flex-wrap" width="500"></p>
 
 ```css
-.parent {
-  flex-wrap: nowrap /* default */
-          o wrap
-          o wrap-reverse
+.padre {
+  flex-wrap: nowrap /* por defecto */
+           o wrap
+           o wrap-reverse
 }
 ```
 
@@ -172,16 +172,16 @@ Esta propiedad es lo que permitirá que los artículos flexibles en su contenedo
 
 Así que hemos aprendido `flex-direction` y` flex-wrap`. ¡Si entiendes esos 2, obtendrás `flex-flow`! Porque es solo una abreviatura de estas dos propiedades 👏
 
-Puede establecer ambas propiedades al mismo tiempo. O simplemente puedes pasar uno de ellos. El valor predeterminado es `row nowrap`. Entonces, si solo establece un valor, la propiedad que no se estableció solo tomará el valor predeterminado.
+Puede establecer ambas propiedades al mismo tiempo. O simplemente puedes pasar uno de ellos. El valor predeterminado es `row nowrap`. Entonces, si solo establece un valor, la propiedad que no se estableció tomará el valor predeterminado.
 
 <p><img src="../code-tidbits/11-flex-flow.png" alt="flex-flow" width="500"></p>
 
 ```css
-.parent {
-  flex-flow: row nowrap /* default */
-          o <flex-direction> <flex-wrap>
-          o <flex-direction>
-          o <flex-wrap>
+.padre {
+  flex-flow: row nowrap /* por defecto */
+           o <flex-direction> <flex-wrap>
+           o <flex-direction>
+           o <flex-wrap>
 }
 ```
 
@@ -196,13 +196,13 @@ Esta es probablemente mi propiedad principal más utilizada. Simplemente elija e
 <p><img src="../code-tidbits/12-justify-content-row.png" alt="justify-content row" width="500"></p>
 
 ```css
-.parent {
-  justify-content: flex-start /* default */
-                o flex-end
-                o center
-                o space-around
-                o space-between
-                o space-evenly
+.padre {
+  justify-content: flex-start /* por defecto */
+                 o flex-end
+                 o center
+                 o space-around
+                 o space-between
+                 o space-evenly
 }
 ```
 
@@ -210,20 +210,20 @@ Esta es probablemente mi propiedad principal más utilizada. Simplemente elija e
 
 ### [Día 13: justify-content [column]](#justify-content-column)
 
-El eje principal también puede estar en posición vertical. En ese caso, flex-direction se establece en `column`. Así es como se alinearán los elementos flexibles en esa instancia.
+El eje principal también puede estar en posición vertical. En ese caso, flex-direction se establece en `column`. Así es como se alinearán los elementos flex en esa instancia.
 
 <p><img src="../code-tidbits/14-justify-content-column.png" alt="justify-content column" width="500"></p>
 
 ```css
-.parent {
+.padre {
   flex-direction: column;
   
-  justify-content: flex-start /* default */
-                o flex-end
-                o center
-                o space-around
-                o space-between
-                o space-evenly
+  justify-content: flex-start /* por defecto */
+                 o flex-end
+                 o center
+                 o space-around
+                 o space-between
+                 o space-evenly
 }
 ```
 
@@ -231,7 +231,7 @@ El eje principal también puede estar en posición vertical. En ese caso, flex-d
 
 ### [Día 14: space-around vs space-evenly](#space-around-vs-space-evenly)
 
-Es posible que no note la sutil diferencia entre space-around y space-evenly. Entonces hablemos de eso. En `space-evenly`, el espacio vacío entre los elementos flex siempre es igual. Sin embargo, en `space-around`, solo los elementos internos tendrán el mismo espacio entre ellos. Al primer y último elemento solo se le asignará la mitad del espacio. Dando la apariencia visual de que está más extendido. Se puede decir que a estas personas les gusta vivir la vida al límite 😂
+Es posible que no note la sutil diferencia entre space-around y space-evenly. Entonces hablemos de eso. En `space-evenly`, el espacio vacío entre los elementos flex siempre es igual. Sin embargo, en `space-around`, solo los elementos internos tendrán el mismo espacio entre ellos. El primer y último elemento solo se le asignará la mitad del espacio. Dando la apariencia visual de que está más extendido. Se puede decir que a estas personas les gusta vivir la vida al límite 😂
 
 <p><img src="../code-tidbits/13-space-around-vs-space-evenly.png" alt="space-around vs space-evenly" width="500"></p>
 
@@ -239,17 +239,17 @@ Es posible que no note la sutil diferencia entre space-around y space-evenly. En
 
 ### [Día 15: align-items [row]](#align-items-row)
 
-Entonces justify-content controla cómo se distribuyen los elementos en el eje principal. ¿Qué pasa con su diseño en el eje transversal? No se preocupe, ahí es donde entran en juego los `align-items`. Recuerde que el eje transversal siempre es perpendicular al eje principal. Entonces, si el eje principal está sentado horizontalmente, donde la dirección de flexión es `row`. Entonces, el eje transversal está sentado verticalmente. ¿No te alegra que pasemos casi una semana en los fundamentos, ese conocimiento se está aplicando ahora? 🤓
+Entonces justify-content controla cómo se distribuyen los elementos en el eje principal. ¿Qué pasa con su diseño en el eje transversal? No se preocupe, ahí es donde entran en juego los `align-items`. Recuerde que el eje transversal siempre es perpendicular al eje principal. Entonces, si el eje principal está sentado horizontalmente, donde la dirección de flexión es `row`. Entonces, el eje transversal está sentado verticalmente. ¿No te alegra que pasemos casi una semana en los fundamentos?, ese conocimiento se está aplicando ahora 🤓
 
 <p><img src="../code-tidbits/15-align-items-row.png" alt="align-items row" width="500"></p>
 
 ```css
-.parent {
-  align-items: stretch /* default */
-            o flex-start
-            o flex-end
-            o center
-            o baseline
+.padre {
+  align-items: stretch /* por defecto */
+             o flex-start
+             o flex-end
+             o center
+             o baseline
 }
 ```
 
@@ -257,9 +257,7 @@ Entonces justify-content controla cómo se distribuyen los elementos en el eje p
 
 ### [Día 16: baseline](#baseline)
 
-The baseline value is a bit tricky. So let's make sure we understand what that is. Baseline has to do with typography or text. It is the imaginary line where the text sits. If you have the same font size, you really don't visually see a difference. However when you have different font sizes, then the text seems all over the place because the baseline is off. The way to ensure a uniform baseline where all the different sizes of text can rest on is to use the `baseline` value 👍
-
-El valor baseline (línea base) es un poco complicado. Así que asegurémonos de entender qué es eso. Baseline tiene que ver con la tipografía o el texto. Es la línea imaginaria donde se encuentra el texto. Si tiene el mismo tamaño de fuente, realmente no ve una diferencia visual. Sin embargo, cuando tiene diferentes tamaños de fuente, el texto aparece por todas partes porque baseline está desactivada. La forma de garantizar una línea base uniforme donde todos los diferentes tamaños de texto puedan descansar es usar el valor de `baseline` 👍
+El valor baseline (línea base) es un poco complicado. Así que asegurémonos de entender qué es eso. Baseline tiene que ver con la tipografía o el texto. Es la línea imaginaria donde se encuentra el texto. Si tiene el mismo tamaño de fuente, realmente no ve una diferencia visual. Sin embargo, cuando tiene diferentes tamaños de fuente, el texto aparece por todas partes porque baseline está desactivada. La forma de garantizar una línea base uniforme donde todos los diferentes tamaños de texto se puedan apoyar es usar el valor de `baseline` 👍
 
 <p><img src="../code-tidbits/16-baseline.png" alt="baseline" width="500"></p>
 
@@ -272,14 +270,14 @@ Ahora echemos un vistazo a cómo se alinean nuestros elementos flex si el eje tr
 <p><img src="../code-tidbits/17-align-items-column.png" alt="align-items column" width="500"></p>
 
 ```css
-.parent {
+.padre {
   flex-direction: column;
   
-  align-items: stretch /* default */
-            o flex-start
-            o flex-end
-            o center
-            o baseline
+  align-items: stretch /* por defecto */
+             o flex-start
+             o flex-end
+             o center
+             o baseline
 }
 ```
 
@@ -292,13 +290,13 @@ Recuerde que teníamos `flex-wrap` donde permitimos que los elementos flex se en
 <p><img src="../code-tidbits/18-align-content.png" alt="align-content" width="500"></p>
 
 ```css
-.parent {
-  align-content: stretch /* default */
-              o flex-start
-              o flex-end
-              o center
-              o space-between
-              o space-around
+.padre {
+  align-content: stretch /* por defecto */
+                o flex-start
+                o flex-end
+                o center
+                o space-between
+                o space-around
 }
 ```
 
@@ -310,7 +308,7 @@ Recuerde que teníamos `flex-wrap` donde permitimos que los elementos flex se en
 
 ### [Día 19: Propiedades del hijo](#child-properties)
 
-Yay, lo hiciste! Lo hicimos usando las propiedades del padre. A continuación, profundisaremos en las propiedades del hijo. Toma un respiro hoy, mañana volveremos a toda velocidad 🏎
+¡Yay, lo hiciste! Lo hicimos usando las propiedades del padre. A continuación, profundizaremos en las propiedades del hijo. Toma un respiro hoy, mañana volveremos a toda velocidad 🏎
 
 <p><img src="../code-tidbits/19-child-properties.png" alt="Child Properties" width="500"></p>
 
@@ -318,14 +316,14 @@ Yay, lo hiciste! Lo hicimos usando las propiedades del padre. A continuación, p
 
 ### [Día 20: order](#order)
 
-De forma predeterminada, los elementos flex se muestran en el mismo orden en que aparecen en su código. Pero, ¿y si quieres cambiar eso? ¡No hay problema! Use la propiedad `order` para cambiar el orden de sus elementos 🔢
+De forma predeterminada, los elementos flex se muestran en el mismo orden en que aparecen en su código. Pero ¿y si quieres cambiar eso? ¡No hay problema! Use la propiedad `order` para cambiar el orden de sus elementos 🔢
 
 <p><img src="../code-tidbits/20-order.png" alt="order" width="500"></p>
 
 ```css
-.child {
-  order: 0 /* default */
-      o <número>
+.hijo {
+  order: 0 /* por defecto */
+       o <número>
 }
 ```
 
@@ -333,29 +331,29 @@ De forma predeterminada, los elementos flex se muestran en el mismo orden en que
 
 ### [Día 21: flex-grow](#flex-grow)
 
-Mencioné al principio que Flexbox es ideal para un diseño receptivo. Aquí es donde brilla. La propiedad `flex-grow` que permite que nuestro elemento flex crezca si es necesario. Entonces, si hay espacio libre adicional en mi contenedor, puedo decirle a un elemento en particular que lo llene en función de alguna proporción. Eso es bastante loco! Cuando estaba aprendiendo CSS, recuerdo que todo es bastante estático. Ahora con esta propiedad, es como si tuviera su propio cerebro y ajustará su tamaño según el contenedor. Eso es muy genial. No tengo que controlar el tamaño. Se ajustará en consecuencia. Este fue un gran golpe mental para mí 🤯
+Mencioné al principio que Flexbox es ideal para un diseño receptivo. Aquí es donde brilla. La propiedad `flex-grow` que permite que nuestro elemento flex crezca si es necesario. Entonces, si hay espacio libre adicional en mi contenedor, puedo decirle a un elemento en particular que lo llene en función de alguna proporción. ¡Eso es bastante loco! Cuando estaba aprendiendo CSS, recuerdo que todo era bastante estático. Ahora con esta propiedad, es como si tuviera su propio cerebro y ajustará su tamaño según el contenedor. Eso es muy genial. No tengo que controlar el tamaño. Se ajustará en consecuencia. Este fue un gran golpe mental para mí 🤯
 
 <p><img src="../code-tidbits/21-flex-grow.png" alt="flex-grow" width="500"></p>
 
 ```css
-.child {
-  flex-grow: 0 /* default */
-          o <número>
+.hijo {
+  flex-grow: 0 /* por defecto */
+           o <número>
 }
 ```
 
 <a id="flex-grow-calculation"></a>
 
-### [Día 23: flex-grow (cálculo)](#flex-grow-calculation)
+### [Día 22: flex-grow (cálculo)](#flex-grow-calculation)
 
-Poder crecer y llenar el espacio libre es bastante genial. Debido a que no establecemos el ancho final de nuestro elemento flexible, el tamaño en el que crece siempre me parece tan aleatorio. Así que echemos un vistazo a las matemáticas. Honestamente, no necesita saber esto para comprender Flexbox. El navegador se encarga de esto automáticamente por usted. Pero saber qué hay detrás de esta brujería podría desmitificar este proceso y ayudarlo a comprenderlo mejor. Es como una vez que conoces el truco de la magia, ya no te engaña la magia 😉
+Poder crecer y llenar el espacio libre es bastante genial. Debido a que no establecemos el ancho final de nuestro elemento flex, el tamaño en el que crece siempre me parece tan aleatorio. Así que echemos un vistazo a las matemáticas. Honestamente, no necesita saber esto para comprender Flexbox. El navegador se encarga de esto automáticamente por usted. Pero saber qué hay detrás de esta brujería podría desmitificar este proceso y ayudarlo a comprenderlo mejor. Es como una vez que conoces el truco de magia, ya no te engaña la magia 😉
 
 <p><img src="../code-tidbits/22-flex-grow-calculation.png" alt="flex-grow calculation" width="500"></p>
 
 <details>
   <summary><b>Click para expandir y ver el cálculo</b></summary><br>
 
-Sé que puede ser bastante abrumador ver todos los números metidos en un tidbit. Así que veamos el cálculo 👍
+Sé que puede ser bastante abrumador ver todos los números metidos en un tidbit (golosina). Así que veamos el cálculo 👍
 
 Aquí están los `HTML` y` CSS` con los que estamos trabajando:
 
@@ -393,7 +391,9 @@ _CSS_
 
 **Paso 1: Desglose de las variables**
 
-Aquí está la fórmula:
+Fórmula:
+
+> **flex grow** = crecimiento flexible
 
 ```code
 nuevo ancho = ( (flex grow / flex grow total ) x espacio libre) + ancho
@@ -416,7 +416,7 @@ Del valor `CSS`, podemos concluir lo siguiente:
 
 - Cada elemento hijo tiene un ancho `100`
 - El elemento padre (contenedor) tiene un ancho de `700`
-- El hijo tiene un `flex-grow` de` 1`, `0`,` 3`
+- Los hijos tienen un `flex-grow` de` 1`, `0`,` 3`
 
 Actualicemos nuestra tabla con esta información:
 
@@ -429,12 +429,12 @@ ancho           | 100 | 100 | 100
 
 <br>
 
-**Paso 3: Calcular "espacio libre"**
+**Paso 3: Calcular el "espacio libre"**
 
-Esta es la fórmula:
+Fórmula:
 
 ```code
-espacio libre = ancho del padre - anchos total de los hijos
+espacio libre = ancho del padre - ancho total de los hijos
 ```
 
 Recuerda lo que sabemos:
@@ -454,7 +454,7 @@ ancho total de los hijos = verde + amarillo + azul
 Ahora podemos calcular nuestro "espacio libre":
 
 ```code
-espacio libre = ancho del padre - anchos total de los hijos
+espacio libre = ancho del padre - ancho total de los hijos
               = 700             -  300
 
 => 400
@@ -473,7 +473,7 @@ ancho           | 100 | 100 | 100
 
 **Paso 4: Calcular el "flex grow total"**
 
-Este es fácil, simplemente sumamos nuestro total `flex-grow`:
+Este es fácil, simplemente sumamos nuestro total de `flex-grow`:
 
 ```code
 flex grow total = verde + amarillo + azul
@@ -482,7 +482,7 @@ flex grow total = verde + amarillo + azul
 => 4
 ```
 
-Rellene nuestro tabla y ¡Voilà! Tenemos toda la información que necesitamos para el cálculo final 👍
+Rellene nuestra tabla y ¡Voilà! Tenemos toda la información que necesitamos para el cálculo final 👍
 
 <i> </i>      | Verde | Amarillo | Azul | Total
 ---           | ---   | ---      | ---  | --- |
@@ -492,7 +492,7 @@ ancho         | 100   | 100      | 100  |
 
 <br>
 
-**Paso final: Calcular "nuevo ancho"**
+**Paso final: Calcular el "nuevo ancho"**
 
 Recuerda la fórmula:
 
@@ -531,7 +531,7 @@ nuevo ancho = ( (3/4 * 400) ) + 100
 ancho           | 200     | 100      | 400
 flex grow       | 1       | 0        | 3    | 4
 espacio libre   |         |          |      | 400
-**nuevo ancho** | **200** | **100**  | ** 400 **
+**nuevo ancho** | **200** | **100**  | **400**
 
 <hr>
 
@@ -541,24 +541,24 @@ espacio libre   |         |          |      | 400
 
 ### [Día 23: flex-shrink](#flex-shrink)
 
-Entonces, `flex-grow` se expandirá para llenar el espacio extra si hay alguno. Lo contrario de eso es `flex-shrink`. Lo que sucede cuando te quedas sin espacio. Esta es la propiedad que controla cuánto se encogerán los elementos flex para ajustarse. Tenga en cuenta que cuanto mayor sea el número, más se reducirá 👍
+Entonces, `flex-grow` se expandirá para llenar el espacio extra si hay alguno. Lo contrario de eso es `flex-shrink`. Lo que sucede cuando te quedas sin espacio. Esta es la propiedad que controla cuanto se encogerán los elementos flex para ajustarse. Tenga en cuenta que cuanto mayor sea el número, más se reducirá 👍
 
 <p><img src="../code-tidbits/23-flex-shrink.png" alt="flex-shrink" width="500"></p>
 
 ```css
-.child {
-  flex-shrink: 1 /* default */
-            o <número>
+.hijo {
+  flex-shrink: 1 /* por defecto */
+             o <número>
 }
 ```
 
 <a id="flex-shrink-calculation"></a>
 
-### [Day 24: flex-shrink (cálculo)](#flex-shrink-calculation)
+### [Día 24: flex-shrink (cálculo)](#flex-shrink-calculation)
 
-Este es otro conocimiento opcional. Pero si eres como yo y tienes curiosidad por saber cómo calcula el navegador flex-shrink. Únete a mí en esta madriguera de conejo 🐰
+Este es otro conocimiento es opcional. Pero si eres como yo y tienes curiosidad por saber cómo calcula el navegador flex-shrink. Únete a mí en esta madriguera de conejo 🐰
 
-La matemática detrás de `flex-shrink` es un poco más complicada que `flex-grow`. Debe tener en cuenta su proporción existente y reducirla de acuerdo con la cantidad de flex shrink. Por lo tanto, hay algunos cálculos más involucrados. De nuevo, si esto te está desanimando. Saltarlo. No necesita saber esto para comprender Flexbox. Afortunadamente, el navegador lo cuida por ti, qué maravilloso 😌
+La matemática detrás de `flex-shrink` es un poco más complicada que `flex-grow`. Debe tener en cuenta su proporción existente y reducirla de acuerdo con la cantidad de encogimiento. Por lo tanto, hay algunos cálculos más involucrados. De nuevo, si esto te está desanimando. Saltarlo. No necesita saber esto para comprender Flexbox. Afortunadamente, el navegador lo cuida por ti, qué maravilloso 😌
 
 <p><img src="../code-tidbits/24-flex-shrink-calculation.png" alt="flex-shrink calculation" width="500"></p>
 
@@ -598,12 +598,11 @@ _CSS_
 
 **Paso 1: Desglose de las variables**
 
-Esta es la fórmula:
+Fórmula:
 
-```code
-shrink space = espacio de contracción
-shrink ratio = relación de contracción
-```
+> **shrink space** = espacio de reducción
+> **shrink ratio** = relación de reducción
+
 
 ```code
 nuevo ancho = ancho - (shrink space x shrink ratio)
@@ -636,18 +635,18 @@ ancho       | 300    | 600
 
 <br>
 
-**Paso 3: Calcular "espacio reducido"**
+**Paso 3: Calcular "shrunk space" (espacio reducido)**
 
-Esta es la formula:
+Formula:
 
 ```code
-espacio reducido = ancho total de los hijos - ancho del padre
+shrunk space = ancho total de los hijos - ancho del padre
 ```
 
 Recuerda lo que sabemos:
 
 - El elemento padre (contenedor) tiene un ancho de `800`
-- Los elementos hijos tienen un ancho de `300`,` 600`
+- Los elementos hijos tienen un ancho de `300` y `600`
 
 Genial, podemos usar esa información para calcular el "ancho total de hijos":
 
@@ -658,11 +657,11 @@ ancho total de los hijos = verde + amarillo
 => 900
 ```
 
-Ahora podemos calcular nuestro "espacio reducido":
+Ahora podemos calcular nuestro "shrunk space":
 
 ```code
-espacio reducido = ancho total de los hijos - ancho del padre
-                 = 900                   -  800
+shrunk space = ancho total de los hijos - ancho del padre
+             = 900                      -  800
 
 => 100
 ```
@@ -673,28 +672,30 @@ Actualicemos nuestra tabla y agreguemos la información adicional:
 ---              | ---    | ---      | --- |
 flex shrink      | 4      | 6
 ancho            | 300    | 600
-espacio reducido | -      | -        | **100**
+shrunk space     | -      | -        | **100**
 
 <br>
 
-**Paso 4: Calcular "shrink ratio" (relación de contracción)**
+**Paso 4: Calcular "shrink ratio" (relación de reducción)**
 
-Esta es la formula:
+> **total shrink scaled width** = ancho total escalado de reducción
+
+Formula:
 
 ```code
-shrink ratio = (ancho x flex shrink) / ancho total de contracción
+shrink ratio = (ancho x flex shrink) / total shrink scaled width
 ```
 
-Noticia esta es una nueva variable, `ancho total encogido`. Por lo tanto, primero debemos calcular eso para obtener nuestra relación de contracción.
+Noticia esta es una nueva variable, `total shrink scaled width`. Por lo tanto, primero debemos calcular eso para obtener nuestro shrink ratio.
 
 <br>
 
-**Paso 4-1: Calcule el  "ancho total escalado de contracción"**
+**Paso 4-1: Calcular el  "total shrink scaled width" (ancho total escalado de reducción)**
 
-Esta es la formula
+Formula:
 
 ```code
-ancho total escalado de contracción = Σ(ancho x flex shrink)
+total shrink scaled width = Σ(ancho x flex shrink)
 ```
 
 "Σ" Sigma es un símbolo matemático que significa la suma de algo. Por lo tanto, debemos aplicar `ancho x flex shrink` para todos los elementos hijos.
@@ -718,7 +719,7 @@ ancho x flex shrink = 600 x 6
 _Finalmente_
 
 ```code
-ancho total escalado de contracción = 1200 + 3600
+total shrink scaled width = 1200 + 3600
 
 => 4800
 ```
@@ -728,18 +729,18 @@ Agreguemos esta información a nuestra tabla:
 <i></i>                            |  Verde | Amarillo | Total
 ---                                | ---    | ---      | --- |
 flex shrink                        | 4      | 6
-width                              | 300    | 600
+ancho                              | 300    | 600
 shrunk space                       | -      | -        | 100
-ancho total escalado de contracción | -      | -        | **4800**
+total shrink scaled width          | -      | -        | **4800**
 
 <br>
 
-**Paso 4-2: Volver a calcular "shrink ratio"**
+**Paso 4-2: Volver a calcular "shrink ratio" (relación de reducción)**
 
-Fantástico, ahora que conocemos el "ancho total escalado de contracción", podemos regresar calculando el "shrink ratio". Recuerda la fórmula:
+Fantástico, ahora que conocemos el "total shrink scaled width", podemos regresar calculando el "shrink ratio". Recuerda la fórmula:
 
 ```code
-shrink ratio = (width x flex shrink) / ancho total escalado de contracción
+shrink ratio = (ancho x flex shrink) / total shrink scaled width
 ```
 
 _Verde_
@@ -763,13 +764,13 @@ Agreguemos esta información a nuestra tabla:
 <i></i>      |  Verde   | Amarillo   | Total
 ---          | ---      | ---        | --- |
 flex shrink  | 4        | 6
-width        | 300      | 600
+ancho        | 300      | 600
 shrunk space | -        | -          | 100
 shrink ratio | **0.25** | **0.75**
 
 <br>
 
-**Paso final: Calcular "nuevo ancho"**
+**Paso final: Calcular el "nuevo ancho"**
 
 Recuerda la formula:
 
@@ -807,29 +808,29 @@ shrink ratio    | 0.25     | 0.75
 
 <a id="flex-basis"></a>
 
-### [Día 26: flex-basis](#flex-basis)
+### [Día 25: flex-basis](#flex-basis)
 
-Con la propiedad flex-grow y flex-shrink, sabemos que el tamaño de flex cambia. Con la propiedad `flex-basis`, aquí es donde establecemos su tamaño inicial. Puede considerar esta propiedad como el ancho de nuestros elementos flex. Entonces, su próxima pregunta podría ser cuál es la diferencia entre ancho y flex-basis. Por supuesto, aún puede usar el ancho y seguirá funcionando. La razón por la que funciona es porque si no configuró flex-basis, el ancho será predeterminado. Por lo tanto, su navegador siempre intentará encontrar el valor de `base flexible` como indicador de tamaño. Y si no puede encontrarlo, entonces no tiene más remedio que ir con su propiedad de ancho. No hagas que el navegador haga un trabajo extra. Hágalo de la manera adecuada y use `flex-basis`.
+Con la propiedad flex-grow y flex-shrink, sabemos que el tamaño de flex cambia. Con la propiedad `flex-basis`, aquí es donde establecemos su tamaño inicial. Puede considerar esta propiedad como el ancho de nuestros elementos flex. Entonces, su próxima pregunta podría ser cuál es la diferencia entre width y flex-basis. Por supuesto, aún puede usar el width y seguirá funcionando. La razón por la que funciona es porque si no configuró flex-basis, el width será predeterminado. Por lo tanto, su navegador siempre intentará encontrar el valor de `flex-basis` como indicador de tamaño. Y si no puede encontrarlo, entonces no tiene más remedio que ir con su propiedad de width. No hagas que el navegador haga un trabajo extra. Hágalo de la manera adecuada y use `flex-basis`.
 
 Puede notar que hice referencia al ancho en mis fórmulas anteriores. Eso es porque no había cubierto flex-basis en ese punto. Entonces, si queremos ser **flex** correctos, reemplace donde mencioné el ancho con flex-basis 😝
 
 <p><img src="../code-tidbits/25-flex-basis.png" alt="flex-basis" width="500"></p>
 
 ```css
-.child {
-  flex-basis: auto /* default */
-           o <ancho>
+.hijo {
+  flex-basis: auto /* por defecto */
+            o <ancho>
 }
 ```
 
-Los valores de ancho válidos son absolutos [`<longitud>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length) y [`<porcentaje>`](https://desarrollador.mozilla.org/en-US/docs/Web/CSS/percentage) . Puede ver algunos ejemplos y leer más en los documentos web de MDN:
+Los valores de ancho válidos son absolutos [`<longitud>`](https://developer.mozilla.org/es/docs/Web/CSS/length) y [`<porcentaje>`](https://developer.mozilla.org/es/docs/Web/CSS/porcentaje) . Puede ver algunos ejemplos y leer más en los documentos web de MDN:
 
-- [`MDN: <longitud>`](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
-- [`MDN: <porcentaje>`](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage)
+- [`MDN: <longitud>`](https://developer.mozilla.org/es/docs/Web/CSS/length)
+- [`MDN: <porcentaje>`](https://developer.mozilla.org/es/docs/Web/CSS/porcentaje)
 
 <a id="flex-basis-vs-widths"></a>
 
-### [Día 26: flex-basis vs widths](#flex-basis-vs-widths)
+### [Día 26: flex-basis vs width](#flex-basis-vs-widths)
 
 Aquí puede ver muy claramente que cuando un elemento tiene flex-basis y un width. El navegador siempre usará el valor establecido con `flex-basis`. Nuevamente, otra razón para usar la forma adecuada 😉
 
@@ -841,18 +842,18 @@ Pero cuidado, si también configuras un `min-width` y un `max-width`. En esos ca
 
 ### [Día 27: flex](#flex)
 
-A veces, configurar `flex-grow`,` flex-shrink` y `flex-base` por separado es agotador. Bueno, no te preocupes. Para los programadores perezosos, me refiero a los programadores eficientes 😜 Puede configurar los 3 con la abreviatura `flex`. La ventaja adicional de esta manera es que no tiene que establecer los 3 valores, puede omitir las propiedades que no le interesan y simplemente establecer la que es. Y para los que omitió, solo tomará el valor predeterminado. Impresionante 👍
+A veces, configurar `flex-grow`,` flex-shrink` y `flex-basis` por separado es agotador. Bueno, no te preocupes. Para los programadores perezosos, me refiero a los programadores eficientes 😜 Puede configurar los 3 con la abreviatura `flex`. La ventaja adicional de usar esta manera es que no tiene que establecer los 3 valores, puede omitir las propiedades que no le interesan y simplemente establecer la que es. Y para los que omitió, solo tomará el valor predeterminado. Impresionante 👍
 
 <p><img src="../code-tidbits/27-flex.png" alt="flex" width="500"></p>
 
 ```css
-.child {
-  flex: 0 1 auto /* default */
-     o <flex-grow> <flex-shrink> <flex-basis>
-     o <flex-grow>
-     o <flex-basis>
-     o <flex-grow> <flex-basis>
-     o <flex-grow> <flex-shrink>
+.hijo {
+  flex: 0 1 auto /* por defecto */
+      o <flex-grow> <flex-shrink> <flex-basis>
+      o <flex-grow>
+      o <flex-basis>
+      o <flex-grow> <flex-basis>
+      o <flex-grow> <flex-shrink>
 }
 ```
 
@@ -860,13 +861,13 @@ A veces, configurar `flex-grow`,` flex-shrink` y `flex-base` por separado es ago
 
 ### [Día 28: align-self](#align-self)
 
-Recuerde nuestra propiedad `align-items` donde podemos establecer el elemento flex a lo largo del eje transversal. Lo que ocurre con align-items es que obliga a TODOS los elementos flex a jugar con las reglas. Pero qué pasa si quieres que uno de ellos rompa la regla. No se preocupe, para los pensadores independientes, puede usar `align-self`. Esta propiedad acepta los mismos valores dados a `align-items`, por lo que puede separarse fácilmente del paquete 😎
+Recuerda nuestra propiedad `align-items` donde podemos establecer el elemento flex a lo largo del eje transversal. Lo que ocurre con align-items es que obliga a TODOS los elementos flex a jugar con las reglas. Pero qué pasa si quieres que uno de ellos rompa la regla. No se preocupe, para los pensadores independientes, puede usar `align-self`. Esta propiedad acepta los mismos valores dados a `align-items`, por lo que puede separarse fácilmente del paquete 😎
 
 <p><img src="../code-tidbits/28-align-self.png" alt="align-self" width="500"></p>
 
 ```css
-.child-1 {
-  align-self: stretch /* default */
+.hijo-1 {
+  align-self: stretch /* por defecto */
            o flex-start
            o flex-end
            o center
@@ -878,9 +879,9 @@ Recuerde nuestra propiedad `align-items` donde podemos establecer el elemento fl
 
 <a id="flexbox-properties"></a>
 
-### [Día 29: Propiedades de flexbox](#flexbox-properties)
+### [Día 29: Propiedades de Flexbox](#flexbox-properties)
 
-¡¡¡HURRA!!! ¡Lo hiciste! ¡Aprendiste todas las propiedades de Flexbox! Eres un ninja de Flexbox ahora! Cubrimos mucho en este corto período de tiempo. Regrese y vuelva a visitar los que aún no comprende. No solo lea mis lecciones de Flexbox. Consulte otros tutoriales de Flexbox. A veces, leer una perspectiva diferente ayudará a solidificar su conocimiento y llenar cualquier vacío. Recuerde que la mejor manera de mejorar es aplicarlo. Te di el conocimiento, ahora depende de TI aplicar y construir algo con él 💪
+¡¡¡HURRA!!! ¡Lo hiciste! ¡Aprendiste todas las propiedades de Flexbox! ¡Eres un ninja de Flexbox ahora! Cubrimos mucho en este corto período de tiempo. Regrese y vuelva a visitar los que aún no comprende. No solo lea mis lecciones de Flexbox. Consulte otros tutoriales de Flexbox. A veces, leer una perspectiva diferente ayudará a solidificar su conocimiento y llenar cualquier vacío. Recuerde que la mejor manera de mejorar es aplicarlo. Te di el conocimiento, ahora depende de TI aplicar y construir algo con él 💪
 
 <p><img src="../code-tidbits/29-flexbox-properties.png" alt="Flexbox Properties" width="500"></p>
 
@@ -888,7 +889,7 @@ Recuerde nuestra propiedad `align-items` donde podemos establecer el elemento fl
 
 ### [Día 30: Hoja de trucos para Flexbox](#flexbox-cheatsheet)
 
-Tidbit (cosita) final! Déjame darte un dato más para el camino. Memorizar todas las propiedades disponibles no es fácil. Incluso después de crear todo este tutorial, todavía no tengo todas estas propiedades memorizadas. Ser un buen programador no se trata de cuánto memorizas, sino de resolver problemas. Y es por eso que es importante para un programador continuar siendo humilde y aprender. Se trata de expandir nuestro kit de herramientas para que cuando enfrentemos un problema, tengamos una variedad de herramientas que podemos seleccionar para solucionarlo 🧰
+¡Tidbit (golosina) final! Déjame darte un dato más para el camino. Memorizar todas las propiedades disponibles no es fácil. Incluso después de crear todo este tutorial, todavía no tengo todas estas propiedades memorizadas. Ser un buen programador no se trata de cuánto memorizas, sino de resolver problemas. Y por eso es importante para un programador continuar siendo humilde y aprender. Se trata de expandir nuestro kit de herramientas para que cuando enfrentemos un problema, tengamos una variedad de herramientas que podemos seleccionar para solucionarlo 🧰
 
 ¡Felicitaciones por completar Flexbox30! Espero que hayas aprendido mucho y gracias por dejar que mis tidbits sean parte de tu viaje de programación 💛
 
@@ -898,11 +899,9 @@ Tidbit (cosita) final! Déjame darte un dato más para el camino. Memorizar toda
 
 <a id="auto-margins"></a>
 
-### [Bonus: Aligning with Auto Margins](#auto-margins)
+### [Bonus: Alineación con márgenes automáticos](#auto-margins)
 
-Bonus content! Another way to align Flexbox child elements is to use auto margins. Although this isn't a Flexbox property, it's still important to be aware of it because it has a very interesting relationship with Flexbox. Check out my code notes on it if you're interested  👉 [Flexbox: Aligning with Auto Margins](/flexbox-aligning-with-auto-margins/README.md)
-
-¡Contenido extra! Otra forma de alinear elementos hijos en Flexbox es usar márgenes automáticos. Aunque esta no es una propiedad de Flexbox, es importante tenerla en cuenta porque tiene una relación muy interesante con Flexbox. Consulte las notas de mi código si está interesado 👉 [Flexbox: Alineando con márgenes automáticos](/flexbox-aligning-with-auto-margins-es/README.md)
+¡Contenido extra! Otra forma de alinear elementos hijos en Flexbox es usar márgenes automáticos. Aunque esta no es una propiedad de Flexbox, es importante tenerla en cuenta porque tiene una relación muy interesante con Flexbox. Consulte las notas de mi código si está interesado 👉 [Flexbox: Alineando con márgenes automáticos](/flexbox30-es/flexbox-aligning-with-auto-margins-es/README.md)
 
 <p><img src="../code-tidbits/bonus-auto-margins.png" alt="Flexbox Cheatsheet" width="500"></p>
 
@@ -912,8 +911,8 @@ Bonus content! Another way to align Flexbox child elements is to use auto margin
 
 **Aprendiendo Flexbox**
 
-- [MDN web docs: Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [MDN web docs: Basic Concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Documentos web de MDN: Flexbox](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Documentos web de MDN: Conceptos básicos de Flexbox](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox)
 - [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Yoksel: Flex Cheatsheet](https://yoksel.github.io/flex-cheatsheet/)
 - [JoniBologna.com: Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)
@@ -941,13 +940,13 @@ Instagram: [@samanthaming](https://www.instagram.com/SamanthaMing/)
 Facebook: [@hi.samanthaming](https://www.facebook.com/hi.samanthaming/)  
 Medium: [@samanthaming](https://medium.com/@samanthaming)  
 Dev: [@samanthaming](https://dev.to/samanthaming)  
-Official: [samanthaming.com](https://www.samanthaming.com/)
+Oficial: [samanthaming.com](https://www.samanthaming.com/)
 
 <a id="download-and-share"></a>
 
-## 💖 Descarga y comparte
+## 💖 Descarga y Comparte
 
-¡Absolutamente! Eres más que bienvenido a descargar y compartir mis tidbits de código. Si ha obtenido algún valor de mi contenido y desea ayudarme a llegar a más personas, ¡comparta!
+¡Absolutamente! Eres más que bienvenido a descargar y compartir mis tidbits de código. Si ha obtenido algún valor de mi contenido y desea ayudarme a llegar a más personas, ¡Comparta!
 
 Una cosa que le pido amablemente es que no edite las imágenes ni recorte mi nombre. Por favor, deje las imágenes intactas. Gracias por elegir hacer lo correcto 😇
 
@@ -955,7 +954,7 @@ Una cosa que le pido amablemente es que no edite las imágenes ni recorte mi nom
 
 ## 🌟 Contribución
 
-¡Si! Cualquiera puede contribuir a la calidad de este contenido. No dude en enviar una solicitud de PR request para corregir errores tipográficos, correcciones ortográficas, mejoras de explicaciones, etc. Si desea ayudar a traducir el tutorial, ¡eso es aún mejor! Espero al menos crear una versión china pronto 👩🏻‍🏫
+¡Si! Cualquiera puede contribuir a la calidad de este contenido. No dude en enviar una solicitud de PR request para corregir errores tipográficos, correcciones ortográficas, mejoras de explicaciones, etc. Si desea ayudar a traducir el tutorial, ¡Eso es aún mejor! Espero al menos crear una versión china pronto 👩🏻‍🏫
 
 **[⬆ volver arriba](#tabla-de-contenidos)**
 
