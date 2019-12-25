@@ -8,13 +8,13 @@ En realidad, también puede usar **márgenes automáticos** para controlar la al
 
 <p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-vertical.png" alt="Vertical Alignment with Auto Margins" width="500"></p>
 
-Y si aplica todos los márgenes (left, right, top, bottom) con la abreviatura `margins`. ¡En realidad centras a ese hijo en particular en la dirección horizontal y vertical!
+Y si aplica todos los márgenes (left, right, top, bottom) con la abreviatura `margin`. ¡En realidad centras a ese hijo en particular en la dirección horizontal y vertical!
 
 <p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-center.png" alt="Centering with Auto Margins" width="500"></p>
 
 ## Entendiendo Margin
 
-Recuerda los conceptos básicos de margen. Agrega **espacio** al elemento. Entonces, con `margin-left: 50px`, agrega un valor de `50px` de espacio a la izquierda del elemento. Lo que empuja el elemento hacia la derecha. Con `margin-left: auto`, el `auto` calcula todo el espacio disponible y lo convierte en la cantidad de espacio a la izquierda del elemento. Lo que empuja el elemento completamente hacia la derecha.
+Recuerda los conceptos básicos de margin. Agrega **espacio** al elemento. Entonces, con `margin-left: 50px`, agrega un valor de `50px` de espacio a la izquierda del elemento. Lo que empuja el elemento hacia la derecha. Con `margin-left: auto`, el `auto` calcula todo el espacio disponible y lo convierte en la cantidad de espacio a la izquierda del elemento. Lo que empuja el elemento completamente hacia la derecha.
 
 <p><img src="../../flexbox-aligning-with-auto-margins/understanding-margin.png" alt="Understanding Margin" width="500"></p>
 
@@ -22,8 +22,8 @@ Recuerda los conceptos básicos de margen. Agrega **espacio** al elemento. Enton
 |-----------------|------------------------------------|--------------------------------------------|
 | `margin-left`   | agrega espacio a la izquierda      | empuja el elemento hacia la derecha        |
 | `margin-right`  | agrega espacio a la derecha        | empuja el elemento hacia la izquierda      |
-| `margin-top`    | agrega espacio a la parte superior | empuja el elemento hacia la parte superior |
-| `margin-bottom` | agrega espacio a la parte inferior | empuja el elemento hacia la parte inferior |
+| `margin-top`    | agrega espacio a la parte superior | empuja el elemento hacia la parte inferior |
+| `margin-bottom` | agrega espacio a la parte inferior | empuja el elemento hacia la parte superior |
 | `margin`        | agrega espacio alrededor           | empuja el elemento hacia el centro         |
 
 ## Los márgenes automáticos siempre ganan 🏆
@@ -34,9 +34,9 @@ Si usa **márgenes automáticos**, reinará supremamente y sus propiedades de al
 
 **¿Por qué?**
 
-> Nota: Si el espacio libre se distribuye a los márgenes automáticos, las propiedades de alineación no tendrán efecto en esa dimensión porque los márgenes habrán robado todo el espacio libre restante después de flex
+> Nota: Si el espacio libre se distribuye a los márgenes automáticos, las propiedades de alineación no tendrán efecto en esa dimensión porque los márgenes habrán robado todo el espacio libre restante después de flex.
 
-En términos no de desarrollo, los **márgenes automáticos** es ese amigo despistado al que invitó amablemente a quedarse en su casa y luego piensan que toda la casa es suya y se hace cargo de todo el espacio. ¿No? No tienes ese tipo de amigo. Yo tampoco 😳 Pero creo que entiendes el punto 😂
+En términos no de desarrollo, los **márgenes automáticos** son ese amigo despistado al que invitó amablemente a quedarse en su casa y luego piensan que toda la casa es suya y se hace cargo de todo el espacio. ¿No? No tienes ese tipo de amigo. Yo tampoco 😳 Pero creo que entiendes el punto 😂
 
 ## Ejemplos de márgenes automáticos
 
@@ -44,14 +44,14 @@ En términos no de desarrollo, los **márgenes automáticos** es ese amigo despi
 
 <p><img src="../../flexbox-aligning-with-auto-margins/auto-margins-examples.png" alt="Auto Margins Examples" width="500"></p>
 
-## ¿Cuál debería usar 🤔
+## ¿Cuál debería usar? 🤔
 
 Apuesto a que tu cabeza está girando ahora para usar qué y cuándo usar qué (el problema de tener varias opciones) 😅 . Así es como lo hago:
 
 1. Utilice siempre las propiedades **Flexbox**
 2. Si no es posible, use **márgenes automáticos**
 
-¿Razonamiento? Creo que las propiedades de Flexbox son más intuitivas y se leen más explícitamente que los "márgenes automáticos". Revisalo:
+¿Razonamiento? Creo que las propiedades de Flexbox son más intuitivas y se leen más explícitamente que los "márgenes automáticos". Revísalo:
 
 ```css
 .hijo {
