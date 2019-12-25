@@ -1,3 +1,5 @@
+Traducido por [@FiliBits](https://github.com/Filibits)
+
 # Flexbox30
 
 Aprenda Flexbox en 30 días con 30 tidbits (golosinas) de código ✨

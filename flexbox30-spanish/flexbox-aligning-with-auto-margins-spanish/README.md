@@ -1,3 +1,5 @@
+Traducido por [@FiliBits](https://github.com/Filibits)
+
 # Flexbox: Alineación con márgenes automáticos
 
 Aprendiste que `align-self` te da el control del elemento hijo en el eje transversal. Su próxima pregunta podría ser "¿hay algo similar para el eje principal" 🤔 ¡Gran pregunta! Lamentablemente, la respuesta es NO 😅. ¡Pero tenemos una propiedad CSS existente que podemos usar! Y eso es **márgenes automáticos**. Podemos usarlo para controlar la alineación horizontal de un elemento específico.
