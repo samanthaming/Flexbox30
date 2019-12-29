@@ -8,7 +8,7 @@ Actually, you can also use **auto margins** to control the vertical alignment of
 
 <p><img src="auto-margins-vertical.png" alt="Vertical Alignment with Auto Margins" width="500"></p>
 
-And if you apply all the margins (left, right, top, bottom) with the shorthand `margins`. You actually center that particular child in the horizontal and vertical direction!
+And if you apply all the margins (left, right, top, bottom) with the shorthand `margin`. You actually center that particular child in the horizontal and vertical direction!
 
 <p><img src="auto-margins-center.png" alt="Centering with Auto Margins" width="500"></p>
 
