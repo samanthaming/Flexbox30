@@ -96,7 +96,7 @@ And this concludes our Flexbox Fundamentals.
 <p><img src="code-tidbits/5-flexbox-module.png" alt="Flexbox Module" width="500"></p>
 
 **[⬆ back to top](#table-of-contents)**
-
+##Parent's properties
 ## Parent Properties
 
 <a id="parent-properties"></a>
