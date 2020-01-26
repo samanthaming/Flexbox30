@@ -1,3 +1,5 @@
+Read this on my new website: [samanthaming.com/flexbox30/](https://www.samanthaming.com/flexbox30/)
+
 # Flexbox30
 
 Learn Flexbox in 30 days with 30 code tidbits ✨
@@ -944,7 +946,9 @@ One thing that I kindly ask is that you don't edit the images or crop my name ou
 
 ## 🌟 Contribution
 
-Yes! Anyone is welcome to contribute to the quality of this content. Please feel free to submit a PR request for typo fixes, spelling corrections, explanation improvements, etc. If you want to help translate the tutorial, that's even cooler! I'm hoping to at least create a Chinese version soon 👩🏻‍🏫
+~~Yes! Anyone is welcome to contribute to the quality of this content. Please feel free to submit a PR request for typo fixes, spelling corrections, explanation improvements, etc. If you want to help translate the tutorial, that's even cooler! I'm hoping to at least create a Chinese version soon 👩🏻‍🏫~~
+
+(Note: all updates will now appear in the new repo: https://github.com/samanthaming/samanthaming.com)
 
 **[⬆ back to top](#table-of-contents)**
 
