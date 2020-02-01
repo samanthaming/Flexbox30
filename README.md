@@ -6,6 +6,8 @@ Learn Flexbox in 30 days with 30 code tidbits ✨
 
 <img src="flexbox30-cover.png" alt="Flexbox Cover" width="350">
 
+<a id="table-of-contents"></a>
+
 ## Table of Contents
 
 1. [Introduction](#flexbox-intro)
@@ -38,7 +40,7 @@ Learn Flexbox in 30 days with 30 code tidbits ✨
 1. [align-self](#align-self)
 1. [Flexbox Properties](#flexbox-properties)
 1. [Flexbox Cheatsheet](#flexbox-cheatsheet)
-1. [Aligning with Auto Margins](#bonus-aligning-with-auto-margins)
+1. [Aligning with Auto Margins](#auto-margins)
 1. [Resources](#resources)
 1. [Say Hello](#say-hello)
 1. [Download & Share](#download-and-share)
